@@ -74,7 +74,7 @@
         <div class="container text-center text-lg-start">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-4">🚀 Simple. Clean. Fast.</span>
+                    <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-4"><i class="bi bi-rocket-takeoff me-1"></i> Simple. Clean. Fast.</span>
                     <h1 class="display-3 fw-bold mb-4">Master Laravel with <span class="text-primary">HighGuy</span></h1>
                     <p class="lead text-muted mb-5" style="max-width: 600px;">
                         A beginner-friendly starter kit designed for students and developers to jumpstart their real-world web applications. Built with Laravel, Bootstrap, and Best Practices.
@@ -135,21 +135,21 @@
                 <div class="col-md-4">
                     <div class="feature-card">
                         <div class="icon-circle"><i class="bi bi-shield-lock"></i></div>
-                        <h4 class="fw-bold">🔐 Auth System</h4>
+                        <h4 class="fw-bold"><i class="bi bi-shield-lock me-2"></i>Auth System</h4>
                         <p class="text-muted">Ready-to-use login, registration, and password recovery powered by standard Laravel patterns.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-card">
                         <div class="icon-circle"><i class="bi bi-compass"></i></div>
-                        <h4 class="fw-bold">🧭 Dashboard</h4>
+                        <h4 class="fw-bold"><i class="bi bi-grid-1x2 me-2"></i>Dashboard</h4>
                         <p class="text-muted">A modern sidebar-based dashboard with basic stats and placeholders for your data.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-card">
                         <div class="icon-circle"><i class="bi bi-pencil-square"></i></div>
-                        <h4 class="fw-bold">🖌️ Easy Theme</h4>
+                        <h4 class="fw-bold"><i class="bi bi-brush me-2"></i>Easy Theme</h4>
                         <p class="text-muted">Clean Blade layouts and CSS structures that you can easily customize to fit your own project.</p>
                     </div>
                 </div>
