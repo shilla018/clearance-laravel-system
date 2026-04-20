@@ -1,8 +1,8 @@
 <header class="header-wrapper">
     <div class="header-container">
         <div class="header-branding">
-            <div class="header-logo">
-                <x-laravel-logo style="width: 38px; color: #FF2D20;" />
+             <div class="header-logo">
+                <img src="{{ asset('img/logo.png') }}" alt="Logo" style="width: 38px; height: 38px; border-radius: 8px;">
             </div>
             <span class="header-name">
                 <span class="header-title">HighGuy</span>

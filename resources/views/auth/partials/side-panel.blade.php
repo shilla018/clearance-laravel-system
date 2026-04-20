@@ -6,7 +6,7 @@
 
 <aside class="auth-brand-panel">
     <a href="{{ route('home') }}" class="auth-brand-mark">
-        <img src="{{ asset('img/favicon.svg') }}" alt="HighGuy Logo">
+        <img src="{{ asset('img/logo.png') }}" alt="HighGuy Logo" style="width: 48px; height: 48px; border-radius: 8px;">
         <span class="auth-brand-copy">
             <strong>HIGHGUY-KIT</strong>
             <span>HighGuy Starter Kit</span>

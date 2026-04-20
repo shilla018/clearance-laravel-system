@@ -7,7 +7,7 @@
     <div class="p-3 officer-sidebar-inner">
         <div class="officer-sidebar-brand mb-4">
             <div class="officer-sidebar-logo" aria-hidden="true">
-                <x-laravel-logo class="officer-sidebar-logo-icon" style="width: 32px; color: #FF2D20;" />
+                <img src="{{ asset('img/logo.png') }}" alt="Logo" style="width: 32px; height: 32px; border-radius: 6px;">
             </div>
             <div class="officer-sidebar-brand-text">
                 <div class="officer-sidebar-brand-title">HighGuy</div>
