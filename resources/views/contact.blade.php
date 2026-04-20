@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us - Road Safety Reporting System')
+@section('title', 'Contact Us - HighGuy Starter Kit')
 
 @section('content')
     <style>

@@ -6,10 +6,10 @@
 
 <aside class="auth-brand-panel">
     <a href="{{ route('home') }}" class="auth-brand-mark">
-        <img src="{{ asset('img/road-safety-favicon.svg') }}" alt="RSRS Logo">
+        <img src="{{ asset('img/favicon.svg') }}" alt="HighGuy Logo">
         <span class="auth-brand-copy">
-            <strong>RSRS-DASHBOARD</strong>
-            <span>Road Safety Reporting System</span>
+            <strong>HIGHGUY-KIT</strong>
+            <span>HighGuy Starter Kit</span>
         </span>
     </a>
 

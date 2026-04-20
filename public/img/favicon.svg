@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>HighGuy Favicon</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="grad">
+            <stop stop-color="#232c3a" offset="0%"></stop>
+            <stop stop-color="#1a222c" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <rect fill="url(#grad)" x="0" y="0" width="64" height="64" rx="16"></rect>
+    <path d="M22,44 L22,20 L28,20 L28,29 L36,29 L36,20 L42,20 L42,44 L36,44 L36,35 L28,35 L28,44 L22,44 Z" fill="#FFFFFF"></path>
+    <circle fill="#0d6efd" cx="52" cy="12" r="6"></circle>
+</svg>

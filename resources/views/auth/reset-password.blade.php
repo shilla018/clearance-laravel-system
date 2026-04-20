@@ -10,7 +10,7 @@
                     <a href="{{ route('home') }}" class="auth-login-brand">
                         <i class="bi bi-cone-striped auth-login-brand-icon" aria-hidden="true"></i>
                         <span>
-                            <strong>Road Safety Reporting System</strong>
+                            <strong>HighGuy Starter Kit</strong>
                             <small>Authorized officer portal</small>
                         </span>
                     </a>
