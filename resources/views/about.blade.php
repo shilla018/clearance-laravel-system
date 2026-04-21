@@ -3,200 +3,7 @@
 @section('title', 'About HighGuy Starter Kit')
 
 @push('critical-head')
-    <style>
-        .about-page {
-            padding-top: 120px;
-            padding-bottom: 72px;
-            background: linear-gradient(180deg, #f8fbff 0%, #ffffff 42%, #f8fbff 100%);
-        }
-
-        .about-hero-card,
-        .about-stat-card,
-        .about-value-card {
-            background: #ffffff;
-            border: 1px solid rgba(59, 130, 246, 0.16);
-            border-radius: 20px;
-            box-shadow: 0 14px 34px rgba(37, 99, 235, 0.08);
-        }
-
-        .about-hero-card {
-            padding: 2rem;
-        }
-
-        .about-kicker {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.45rem;
-            padding: 0.4rem 0.8rem;
-            border-radius: 999px;
-            background: rgba(59, 130, 246, 0.1);
-            color: #1d4ed8;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .about-title {
-            font-size: clamp(2rem, 3vw, 2.8rem);
-            line-height: 1.1;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .about-copy {
-            color: #64748b;
-            line-height: 1.75;
-            margin-bottom: 1.5rem;
-        }
-
-        .about-list {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: grid;
-            gap: 0.8rem;
-        }
-
-        .about-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.6rem;
-            color: #334155;
-        }
-
-        .about-list i {
-            color: #2563eb;
-        }
-
-        .about-stat-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 0.9rem;
-        }
-
-        .about-stat-card {
-            padding: 1.15rem;
-        }
-
-        .about-stat-card i {
-            display: inline-flex;
-            width: 34px;
-            height: 34px;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            margin-bottom: 0.55rem;
-            background: rgba(59, 130, 246, 0.12);
-            color: #2563eb;
-            font-size: 1rem;
-        }
-
-        .about-stat-card strong {
-            display: block;
-            font-size: 1.45rem;
-            color: #1d4ed8;
-            line-height: 1.1;
-        }
-
-        .about-stat-card span {
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-
-        .about-section-title {
-            font-size: 1.4rem;
-            font-weight: 800;
-            margin-bottom: 0.9rem;
-        }
-
-        .about-value-card {
-            padding: 1.2rem;
-            height: 100%;
-        }
-
-        .about-value-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 14px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(59, 130, 246, 0.12);
-            color: #2563eb;
-            margin-bottom: 0.7rem;
-        }
-
-        .about-value-card h3 {
-            font-size: 1.02rem;
-            margin-bottom: 0.45rem;
-        }
-
-        .about-value-card p {
-            margin: 0;
-            color: #64748b;
-            font-size: 0.94rem;
-            line-height: 1.7;
-        }
-
-        .about-stack-card,
-        .about-developer-card {
-            background: #ffffff;
-            border: 1px solid rgba(59, 130, 246, 0.16);
-            border-radius: 20px;
-            box-shadow: 0 14px 34px rgba(37, 99, 235, 0.08);
-            padding: 1.4rem;
-            height: 100%;
-        }
-
-        .about-stack-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 0.85rem;
-        }
-
-        .about-stack-item {
-            border: 1px solid rgba(59, 130, 246, 0.16);
-            border-radius: 14px;
-            padding: 0.8rem 0.7rem;
-            text-align: center;
-            background: #f8fbff;
-        }
-
-        .about-stack-item i {
-            font-size: 1.25rem;
-            color: #2563eb;
-            display: inline-block;
-            margin-bottom: 0.3rem;
-        }
-
-        .about-stack-item span {
-            display: block;
-            font-size: 0.86rem;
-            color: #475569;
-            font-weight: 600;
-        }
-
-        .about-developer-card p {
-            margin: 0 0 0.8rem;
-            color: #64748b;
-            line-height: 1.7;
-        }
-
-        .about-developer-meta {
-            display: inline-flex;
-            flex-wrap: wrap;
-            gap: 0.45rem;
-        }
-
-        .about-developer-meta span {
-            border-radius: 999px;
-            background: rgba(59, 130, 246, 0.1);
-            color: #1d4ed8;
-            padding: 0.3rem 0.65rem;
-            font-size: 0.8rem;
-            font-weight: 700;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
 @endpush
 
 @section('content')
@@ -251,7 +58,9 @@
 
             <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
                 <h2 class="about-section-title mb-0">What makes it professional</h2>
-                <a href="{{ route('home') }}" class="btn btn-outline-primary px-4">Back to Home</a>
+                <a href="{{ route('home') }}" class="btn btn-outline-primary px-4">
+                    <i class="bi bi-arrow-left me-1"></i>Back to Home
+                </a>
             </div>
 
             <div class="row g-3">
@@ -278,7 +87,7 @@
                 </div>
             </div>
 
-            <div class="row g-3 mt-1">
+            <div class="row g-3 mt-1 align-items-stretch">
                 <div class="col-lg-7">
                     <article class="about-stack-card">
                         <h2 class="about-section-title">Languages & Technologies</h2>
