@@ -9,7 +9,6 @@ Route::view('/', 'home')->name('home');
 require __DIR__.'/auth.php';
 Route::view('/home', 'home');
 Route::view('/about', 'about')->name('about');
-Route::view('/contact', 'contact')->name('contact');
 
 Route::middleware('auth')->prefix('dashboard')->name('dashboard.')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('index');
