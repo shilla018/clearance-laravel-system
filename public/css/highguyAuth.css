@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --auth-primary: #3b82f6;
-    --auth-primary-dark: #2563eb;
-    --auth-secondary: #0d6efd;
-    --auth-accent: #60a5fa;
-    --auth-primary-soft: #f3fbff;
-    --auth-primary-soft-alt: #e4f5ff;
+    --auth-primary: var(--color-primary-500, #3b82f6);
+    --auth-primary-dark: var(--color-primary-600, #2563eb);
+    --auth-secondary: var(--color-primary-500, #3b82f6);
+    --auth-accent: var(--color-primary-400, #60a5fa);
+    --auth-primary-soft: var(--color-primary-50, #eff6ff);
+    --auth-primary-soft-alt: #dbeafe;
     --auth-text: #102f45;
-    --auth-muted: #516d80;
-    --auth-border: rgba(59, 130, 246, 0.16);
+    --auth-muted: var(--color-slate-500, #64748b);
+    --auth-border: rgba(var(--color-primary-500-rgb, 59, 130, 246), 0.16);
     --auth-surface: rgba(255, 255, 255, 0.92);
-    --auth-shadow: 0 24px 60px rgba(37, 99, 235, 0.14);
+    --auth-shadow: 0 24px 60px rgba(var(--color-primary-600-rgb, 37, 99, 235), 0.14);
 }
 
 .auth-layout-body {
@@ -1126,7 +1126,7 @@
 .btn-brand.auth-login-button:hover,
 .btn-brand.auth-login-button:focus,
 .btn-brand.auth-login-button:active {
-    background: #3b82f6 !important;
+    background: var(--color-primary-500, #3b82f6) !important;
     background-image: none !important;
     box-shadow: none !important;
     transform: none !important;
@@ -1135,7 +1135,7 @@
 .btn-brand.auth-login-button:hover,
 .btn-brand.auth-login-button:focus,
 .btn-brand.auth-login-button:active {
-    background: #2563eb !important;
+    background: var(--color-primary-600, #2563eb) !important;
 }
 
 .btn-brand[disabled] {
@@ -1530,13 +1530,13 @@
 
 .auth-login-brand-panel {
     padding: clamp(1.8rem, 4vw, 2.8rem);
-    background: #3b82f6;
+    background: var(--color-primary-500, #3b82f6);
     color: #ffffff;
     gap: 1.6rem;
 }
 
 .auth-login-shell:hover .auth-login-brand-panel {
-    background: #3b82f6;
+    background: var(--color-primary-500, #3b82f6);
 }
 
 .auth-login-brand {
@@ -1662,12 +1662,12 @@
 .auth-login-title {
     gap: 0.55rem;
     font-size: 2rem;
-    color: #2563eb;
+    color: var(--color-primary-600, #2563eb);
 }
 
 .auth-login-title i {
     font-size: 1rem;
-    color: #3b82f6;
+    color: var(--color-primary-500, #3b82f6);
 }
 
 .auth-login-subtitle {
@@ -1687,22 +1687,22 @@
 }
 
 .auth-input-group label {
-    color: #1d4ed8;
+    color: var(--color-primary-700, #1d4ed8);
     font-size: 0.82rem;
     font-weight: 700;
 }
 
 .auth-login-input {
     min-height: 54px;
-    border: 2px solid #60a5fa;
+    border: 2px solid var(--color-primary-400, #60a5fa);
     border-radius: 999px;
-    background: #eff6ff;
+    background: var(--color-primary-50, #eff6ff);
     box-shadow: none;
 }
 
 .auth-login-input:focus-within {
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.18);
+    border-color: var(--color-primary-500, #3b82f6);
+    box-shadow: 0 0 0 4px rgba(var(--color-primary-500-rgb, 59, 130, 246), 0.18);
 }
 
 .auth-login-input input {
@@ -1764,7 +1764,7 @@
 .auth-login-button {
     border-radius: 999px;
     padding: 0.95rem 1rem;
-    background: #3b82f6;
+    background: var(--color-primary-500, #3b82f6);
     color: #ffffff;
     font-size: 0.9rem;
     font-weight: 700;
@@ -1772,7 +1772,7 @@
 
 .auth-login-button:hover,
 .auth-login-button:focus {
-    background: #2563eb;
+    background: var(--color-primary-600, #2563eb);
 }
 
 .auth-login-back-link {
