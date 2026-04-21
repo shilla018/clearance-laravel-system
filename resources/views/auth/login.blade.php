@@ -8,7 +8,7 @@
             <div class="auth-login-shell">
                 <aside class="auth-login-brand-panel">
                     <a href="{{ route('home') }}" class="auth-login-brand">
-                        <x-laravel-logo class="auth-login-brand-icon" style="width: 38px; color: #FF2D20; margin-right: 12px;" />
+                        <img src="{{ asset('img/logo.png') }}" alt="Logo" class="auth-login-brand-icon" style="width: 38px; height: 38px; border-radius: 8px; margin-right: 12px;">
                         <span>
                             <strong>HighGuy Starter Kit</strong>
                             <small>Student Friendly Portal</small>
