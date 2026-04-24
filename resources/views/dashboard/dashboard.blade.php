@@ -49,18 +49,22 @@
 
     <div class="row g-3 g-xl-4">
         <div class="col-lg-8">
-            <section class="dashboard-panel h-100 p-5 text-center">
-                 <div class="py-5">
-                    <x-laravel-logo class="mb-4 dashboard-welcome-logo" />
-                    <h2 class="fw-semibold dashboard-welcome-title">Welcome to your new Dashboard</h2>
-                    <p class="text-muted mx-auto mb-4" style="max-width: 500px;">
-                        This is the HighGuy Starter Kit dashboard. You can now start adding your own modules, charts, and data tables here.
-                    </p>
-                    <div class="d-flex justify-content-center gap-2">
-                        <button class="btn btn-primary px-4">Documentation</button>
-                        <button class="btn btn-outline-secondary px-4">System Settings</button>
+            <section class="dashboard-panel h-100">
+                <div class="dashboard-panel__header">
+                    <div>
+                        <span class="dashboard-panel__eyebrow">Monthly Trend</span>
+                        <h3 class="dashboard-panel__title">Applications Overview</h3>
                     </div>
-                 </div>
+                    <div class="d-flex gap-2 align-items-center">
+                        <span class="dashboard-chart-badge dashboard-chart-badge--up">
+                            <i class="bi bi-arrow-up-right"></i> 12.4%
+                        </span>
+                        <span class="text-muted" style="font-size:0.78rem;">vs last year</span>
+                    </div>
+                </div>
+                <div style="position: relative; height: 280px;">
+                    <canvas id="applicationsChart"></canvas>
+                </div>
             </section>
         </div>
         <div class="col-lg-4">
@@ -108,145 +112,83 @@
 @endsection
 
 @push('styles')
-<style>
-    .dashboard-page {
-        color: var(--color-dark-800);
-        font-size: 0.95rem;
-    }
+<link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+@endpush
 
-    .dashboard-stat-card,
-    .dashboard-panel,
-    .dashboard-summary-tile {
-        background: var(--color-white);
-        border: 1px solid rgba(var(--color-dark-800-rgb), 0.1);
-        box-shadow: 0 16px 40px rgba(var(--color-dark-900-rgb), 0.07);
-    }
+@push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const ctx = document.getElementById('applicationsChart');
+    if (!ctx) return;
 
-    .dashboard-stat-card,
-    .dashboard-summary-tile {
-        border-radius: 24px;
-    }
+    const primaryColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--color-primary-600').trim() || '#2563eb';
 
-    .dashboard-panel {
-        border-radius: 28px;
-        padding: 1.35rem;
-    }
+    const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const data   = [38, 52, 61, 45, 78, 95, 88, 102, 74, 115, 130, 142];
 
-    .dashboard-stat-card {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        min-height: 124px;
-        padding: 1.25rem 1.35rem;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .dashboard-stat-card--blue {
-        color: var(--color-primary-600);
-        background: linear-gradient(180deg, rgba(var(--color-primary-500-rgb), 0.1), var(--color-white));
-    }
-
-    .dashboard-stat-card--slate {
-        color: var(--color-slate-600);
-        background: linear-gradient(180deg, rgba(var(--color-dark-800-rgb), 0.08), var(--color-white));
-    }
-
-    .dashboard-stat-card--teal {
-        color: var(--color-success-700);
-        background: linear-gradient(180deg, rgba(var(--color-success-500-rgb), 0.1), var(--color-white));
-    }
-
-    .dashboard-stat-card--amber {
-        color: var(--color-warning-700);
-        background: linear-gradient(180deg, rgba(var(--color-warning-500-rgb), 0.12), var(--color-white));
-    }
-
-    .dashboard-stat-card__icon,
-    .dashboard-summary-tile__icon {
-        width: 56px;
-        height: 56px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.76);
-        border: 1px solid rgba(var(--color-dark-800-rgb), 0.08);
-        font-size: 1.35rem;
-        flex-shrink: 0;
-    }
-
-    .dashboard-stat-card__label,
-    .dashboard-summary-tile__label,
-    .dashboard-panel__eyebrow {
-        display: block;
-        font-size: 0.72rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--color-slate-500);
-    }
-
-    .dashboard-stat-card__value {
-        margin: 0.25rem 0 0;
-        font-size: clamp(1.35rem, 1.8vw, 1.75rem);
-        color: var(--color-dark-800);
-    }
-
-    .dashboard-panel__header {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .dashboard-panel__title {
-        margin: 0.25rem 0 0;
-        font-size: clamp(1rem, 1.2vw, 1.15rem);
-        font-weight: 700;
-        color: var(--color-dark-800);
-    }
-
-    .dashboard-summary-tile {
-        display: flex;
-        align-items: center;
-        gap: 0.95rem;
-        padding: 1.5rem;
-        height: 100%;
-    }
-
-    .dashboard-summary-tile__value {
-        font-size: clamp(1.15rem, 1.4vw, 1.35rem);
-        font-weight: 700;
-        color: var(--color-dark-800);
-    }
-
-    .dashboard-welcome-logo {
-        width: 80px;
-        color: var(--color-danger-500);
-    }
-
-    .dashboard-welcome-title {
-        font-size: clamp(1.2rem, 1.8vw, 1.55rem);
-        line-height: 1.3;
-        color: var(--color-dark-800);
-    }
-
-    .dashboard-activity-title {
-        font-size: clamp(1rem, 1.4vw, 1.2rem);
-        line-height: 1.3;
-        color: var(--color-dark-800);
-    }
-
-    @media (max-width: 768px) {
-        .dashboard-panel {
-            border-radius: 22px;
-            padding: 1rem;
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels,
+            datasets: [{
+                label: 'Applications',
+                data,
+                fill: true,
+                tension: 0.45,
+                pointRadius: 4,
+                pointHoverRadius: 6,
+                borderWidth: 2.5,
+                borderColor: '#2563eb',
+                pointBackgroundColor: '#2563eb',
+                pointBorderColor: '#ffffff',
+                pointBorderWidth: 2,
+                backgroundColor: function(context) {
+                    const chart = context.chart;
+                    const { ctx: c, chartArea } = chart;
+                    if (!chartArea) return 'rgba(37,99,235,0.08)';
+                    const gradient = c.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
+                    gradient.addColorStop(0, 'rgba(37,99,235,0.18)');
+                    gradient.addColorStop(1, 'rgba(37,99,235,0.0)');
+                    return gradient;
+                }
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: 'index', intersect: false },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    backgroundColor: '#1e293b',
+                    titleColor: '#94a3b8',
+                    bodyColor: '#f1f5f9',
+                    padding: 12,
+                    cornerRadius: 10,
+                    displayColors: false,
+                    callbacks: {
+                        title: (items) => items[0].label,
+                        label: (item) => ` ${item.formattedValue} Applications`
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    grid: { display: false },
+                    border: { display: false },
+                    ticks: { color: '#94a3b8', font: { size: 12 } }
+                },
+                y: {
+                    beginAtZero: true,
+                    border: { display: false, dash: [4, 4] },
+                    grid: { color: 'rgba(0,0,0,0.05)' },
+                    ticks: { color: '#94a3b8', font: { size: 12 }, maxTicksLimit: 6 }
+                }
+            }
         }
-
-        .dashboard-summary-tile {
-            padding: 1rem;
-        }
-    }
-</style>
+    });
+});
+</script>
 @endpush
