@@ -1,107 +1,138 @@
-# HighGuy Starter Kit
+# HighGuy_37 Starter Kit
 
-A simple, clean, and beginner-friendly **Laravel Starter Kit** built to help IT students quickly start real-world web applications.
+HighGuy_37 Starter Kit is a Laravel starter project built for students and developers who want a clean foundation for small to medium web applications. It includes custom authentication, public pages, a protected dashboard, profile pages, notification routes, and reusable Blade layouts styled with Bootstrap and custom CSS.
 
----
+The goal is simple: give you a working Laravel base that is easy to read, extend, and redesign.
 
-## Overview
+## What Is Included
 
-**HighGuy Starter Kit** provides a ready-to-use Laravel setup with authentication and a modern dashboard UI. It is designed for beginners who want to learn and build fast.
-
----
-
-## Features
-
-- Authentication (Login, Register, Logout)
-- Dashboard with Sidebar
-- Responsive UI (Bootstrap + CSS Grid)
-- Clean Blade Structure
-- MySQL Database
-- Protected Routes
-- Basic Dashboard Stats
-- Easy to Extend
-
----
+- Public home page and about page
+- Custom login, registration, logout, and password reset flow
+- Protected dashboard route under `/dashboard`
+- Responsive dashboard layout with header, sidebar, stat cards, summary tiles, chart area, and recent activity panel
+- Profile page with editable account information
+- Notification routes and basic notification views
+- Audit trail model, migration, middleware, observer, and service structure
+- Responsive Blade layouts using Bootstrap 5, Bootstrap Icons, and custom CSS
+- MySQL-ready Laravel migrations for users, cache, jobs, and audit trails
+- Friendly error pages for common HTTP errors
 
 ## Tech Stack
 
-- Laravel
-- Blade
+- PHP 8.2+
+- Laravel 12
+- Blade templates
 - Bootstrap 5
-- CSS Grid
+- Bootstrap Icons
 - JavaScript
 - MySQL
+- Chart.js on the dashboard
+- SweetAlert2 for system alerts
 
----
+## Main Routes
+
+```text
+/              Home page
+/home          Home page
+/about         About page
+/login         Login page
+/register      Registration page
+/forgot-password
+/dashboard     Protected dashboard
+/dashboard/profile
+/dashboard/notifications
+```
+
+## Requirements
+
+- PHP 8.2 or newer
+- Composer
+- MySQL or another database supported by Laravel
 
 ## Installation
 
 ```bash
-git clone https://github.com/your-username/highguy-starter-kit.git
-cd highguy-starter-kit
+composer install
+```
 
+Create or update your `.env` file with the correct app and database settings. This repository currently does not include a `.env.example`, so make sure these values exist:
 
+```env
+APP_NAME="HighGuy_37 Starter Kit"
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=http://127.0.0.1:8000
 
-cp .env.example .env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_user
+DB_PASSWORD=your_database_password
+```
+
+Then run:
+
+```bash
 php artisan key:generate
-
 php artisan migrate
 php artisan serve
 ```
 
----
+Open:
 
-## Authentication
-
-Powered by Laravel Breeze:
-
-- Login
-- Register
-- Logout
-- Password Reset
-
----
-
-## Dashboard
-
-Accessible at:
-
-```
-/dashboard
+```text
+http://127.0.0.1:8000
 ```
 
-Includes:
+## Testing
 
-- Welcome message
-- User stats
-- Sidebar navigation
+```bash
+php artisan test
+```
 
----
+## Dashboard Notes
 
-## Extend
+The dashboard contains a mix of real and placeholder data:
 
-- Add CRUD
-- Add roles (Admin/User)
-- Add notifications (SweetAlert2)
+- `Total Users` comes from the users table.
+- `Active Sessions`, `New Messages`, `Pending Tasks`, summary tiles, and chart values are placeholder/demo values.
+- These placeholders are meant to be replaced with real business data as you build your application.
 
----
+## Authentication Notes
 
-## Purpose
+Authentication is custom-built with local controllers:
 
-Built to help beginners:
+- `LoginController`
+- `RegisterController`
+- `PasswordResetController`
+- `ResetPasswordController`
 
-- Learn Laravel fast
-- Start projects easily
-- Understand real-world structure
+This project is not using Laravel Breeze or Jetstream.
 
----
+## Known Notes
+
+- The repository currently has no `.env.example`; create your `.env` manually if needed.
+- The visible pages are powered by Blade, Bootstrap, and public CSS/JS files.
+- The dashboard chart and several dashboard counters are demo placeholders.
+- If old styles remain in the browser, run `php artisan view:clear` and hard refresh with `Ctrl + F5`.
+
+## Suggested Next Steps
+
+- Replace dashboard placeholder data with real queries.
+- Add role and permission logic if your application needs admins, staff, or users.
+- Add CRUD modules for your project domain.
+- Add tests for authentication, profile updates, and dashboard access.
+- Create a `.env.example` for easier setup by other developers.
 
 ## License
 
-Free for educational use.
+This project uses the MIT license. See [LICENSE](LICENSE) for details.
 
----
+## Developer
 
-## Support
+Built and maintained by Hagai Harold Ngobey.
 
-Give this project a star on GitHub if it helps you!
+- GitHub: <https://github.com/harryhagai>
+- Email: hngobey@gmail.com
