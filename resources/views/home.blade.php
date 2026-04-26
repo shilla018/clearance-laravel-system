@@ -84,6 +84,52 @@
             display: flex;
             align-items: flex-start;
         }
+
+        .stack-usage-section {
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .stack-usage-card {
+            height: 100%;
+            padding: 22px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .stack-usage-card:hover {
+            transform: translateY(-4px);
+            border-color: #3b82f6;
+            box-shadow: 0 18px 35px rgba(15, 23, 42, 0.07);
+        }
+
+        .stack-usage-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #eff6ff;
+            color: #3b82f6;
+            font-size: 1.15rem;
+            margin-bottom: 14px;
+        }
+
+        .stack-usage-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 14px;
+            border-radius: 999px;
+            background: #e0f2fe;
+            color: #0369a1;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
     </style>
 @endpush
 
@@ -107,7 +153,7 @@
                     </div>
 
                     <div class="mt-5">
-                        <div class="tech-pill">Laravel 13</div>
+                        <div class="tech-pill">Laravel 12</div>
                         <div class="tech-pill">Bootstrap 5</div>
                         <div class="tech-pill">MySQL</div>
                         <div class="tech-pill">Blade</div>
@@ -140,6 +186,92 @@
                             </div>
                             <span class="fw-semibold">Clean Code Structure</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stack-usage-section py-5">
+        <div class="container py-4">
+            <div class="row align-items-end mb-4">
+                <div class="col-lg-7">
+                    <span class="stack-usage-label">
+                        <i class="bi bi-layers"></i>
+                        Tech Stack Usage
+                    </span>
+                    <h2 class="fw-bold mb-3">Stacks Used in This Starter Kit</h2>
+                    <p class="text-muted mb-lg-0">
+                        These are the core technologies behind this starter kit and how each one supports the application
+                        during development.
+                    </p>
+                </div>
+                <div class="col-lg-5 text-lg-end">
+                    <a href="{{ route('about') }}" class="btn btn-outline-primary px-4">
+                        Learn More <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="stack-usage-card">
+                        <div class="stack-usage-icon"><i class="bi bi-braces"></i></div>
+                        <h4 class="fw-bold mb-2">Laravel 12</h4>
+                        <p class="text-muted mb-0">
+                            Handles routing, authentication, middleware, models, migrations, controllers, and the main
+                            backend application structure.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="stack-usage-card">
+                        <div class="stack-usage-icon"><i class="bi bi-filetype-php"></i></div>
+                        <h4 class="fw-bold mb-2">PHP 8.2+</h4>
+                        <p class="text-muted mb-0">
+                            Runs the Laravel project and powers server-side logic, services, validation, and business
+                            rules.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="stack-usage-card">
+                        <div class="stack-usage-icon"><i class="bi bi-bootstrap"></i></div>
+                        <h4 class="fw-bold mb-2">Bootstrap 5</h4>
+                        <p class="text-muted mb-0">
+                            Builds responsive layouts, grid structures, buttons, spacing, and reusable interface
+                            components.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="stack-usage-card">
+                        <div class="stack-usage-icon"><i class="bi bi-layout-text-window-reverse"></i></div>
+                        <h4 class="fw-bold mb-2">Blade Templates</h4>
+                        <p class="text-muted mb-0">
+                            Organizes pages, layouts, components, and sections so the frontend stays easy to maintain and
+                            extend.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="stack-usage-card">
+                        <div class="stack-usage-icon"><i class="bi bi-database"></i></div>
+                        <h4 class="fw-bold mb-2">MySQL Database</h4>
+                        <p class="text-muted mb-0">
+                            Stores users, audit trails, notifications, and other data needed by the dashboard and auth
+                            flow.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="stack-usage-card">
+                        <div class="stack-usage-icon"><i class="bi bi-lightning-charge"></i></div>
+                        <h4 class="fw-bold mb-2">Vite</h4>
+                        <p class="text-muted mb-0">
+                            Supports the frontend build workflow, asset bundling, and development server for project CSS
+                            and JavaScript.
+                        </p>
                     </div>
                 </div>
             </div>

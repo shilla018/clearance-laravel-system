@@ -1,29 +1,29 @@
-# 🚀 HighGuy Starter Kit
+# HighGuy Starter Kit
 
 A simple, clean, and beginner-friendly **Laravel Starter Kit** built to help IT students quickly start real-world web applications.
 
 ---
 
-## 📌 Overview
+## Overview
 
 **HighGuy Starter Kit** provides a ready-to-use Laravel setup with authentication and a modern dashboard UI. It is designed for beginners who want to learn and build fast.
 
 ---
 
-## ✨ Features
+## Features
 
-- 🔐 Authentication (Login, Register, Logout)
-- 🧭 Dashboard with Sidebar
-- 🎨 Responsive UI (Bootstrap + CSS Grid)
-- ⚡ Clean Blade Structure
-- 🗄️ MySQL Database
-- 🔒 Protected Routes
-- 📊 Basic Dashboard Stats
-- 💡 Easy to Extend
+- Authentication (Login, Register, Logout)
+- Dashboard with Sidebar
+- Responsive UI (Bootstrap + CSS Grid)
+- Clean Blade Structure
+- MySQL Database
+- Protected Routes
+- Basic Dashboard Stats
+- Easy to Extend
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - Laravel
 - Blade
@@ -34,14 +34,13 @@ A simple, clean, and beginner-friendly **Laravel Starter Kit** built to help IT 
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ```bash
 git clone https://github.com/your-username/highguy-starter-kit.git
 cd highguy-starter-kit
 
-composer install
-npm install && npm run dev
+
 
 cp .env.example .env
 php artisan key:generate
@@ -52,7 +51,7 @@ php artisan serve
 
 ---
 
-## 🔐 Authentication
+## Authentication
 
 Powered by Laravel Breeze:
 
@@ -63,7 +62,7 @@ Powered by Laravel Breeze:
 
 ---
 
-## 🧭 Dashboard
+## Dashboard
 
 Accessible at:
 
@@ -79,7 +78,7 @@ Includes:
 
 ---
 
-## 🚀 Extend
+## Extend
 
 - Add CRUD
 - Add roles (Admin/User)
@@ -87,7 +86,7 @@ Includes:
 
 ---
 
-## 🎯 Purpose
+## Purpose
 
 Built to help beginners:
 
@@ -97,12 +96,12 @@ Built to help beginners:
 
 ---
 
-## 📄 License
+## License
 
 Free for educational use.
 
 ---
 
-## ⭐ Support
+## Support
 
-Give this project a ⭐ on GitHub if it helps you!
+Give this project a star on GitHub if it helps you!
