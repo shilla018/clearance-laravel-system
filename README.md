@@ -92,6 +92,34 @@ Open:
 http://127.0.0.1:8000
 ```
 
+## Start Your Own Git Repository
+
+If you downloaded this starter kit and want to use it as your own project, remove the existing Git history first, then initialize a fresh repository:
+
+```bash
+rm -rf .git
+git init
+git add .
+git commit -m "Initial project setup"
+```
+
+On Windows PowerShell:
+
+```powershell
+Remove-Item -Recurse -Force .git
+git init
+git add .
+git commit -m "Initial project setup"
+```
+
+After that, create your own GitHub repository and connect it:
+
+```bash
+git remote add origin https://github.com/your-username/your-repository-name.git
+git branch -M main
+git push -u origin main
+```
+
 ## Testing
 
 ```bash
