@@ -24,4 +24,4 @@ Route::middleware('auth')->prefix('dashboard')->name('dashboard.')->group(functi
     Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
 });
 
-Route::redirect('/e-learning', '/login')->name('e-learning');
+Route::get('/e-learning', fn () => redirect()->route('login'))->name('e-learning');

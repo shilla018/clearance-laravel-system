@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +6,7 @@
     <title>HighGuy_37 Dashboard | HighGuy_37 Starter Kit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" type="image/svg+xml" href="{{ asset('img/favicon.svg') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="{{ asset('css/rootcolor.css') }}" rel="stylesheet">
@@ -89,7 +89,7 @@
             gap: 0.75rem;
             flex-shrink: 0;
         }
-        .officer-shared-page-header__title {
+        .highguy-shared-page-header__title {
             margin: 0;
             font-size: clamp(1.2rem, 1.5vw, 1.5rem);
             line-height: 1.25;
@@ -101,7 +101,7 @@
             gap: 0.55rem;
         }
 
-        .officer-shared-page-header__subtitle {
+        .highguy-shared-page-header__subtitle {
             max-width: 760px;
             margin: 0.45rem 0 0;
             color: var(--color-slate-500);
@@ -121,7 +121,7 @@
                 justify-content: flex-start;
                 flex-wrap: wrap;
             }
-            .officer-shared-page-header__subtitle {
+            .highguy-shared-page-header__subtitle {
                 font-size: 0.8rem;
             }
         }

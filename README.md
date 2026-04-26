@@ -7,7 +7,7 @@ The goal is simple: give you a working Laravel base that is easy to read, extend
 ## What Is Included
 
 - Public home page and about page
-- Custom login, registration, logout, and password reset flow
+- Custom login, logout, and password reset flow
 - Protected dashboard route under `/dashboard`
 - Responsive dashboard layout with header, sidebar, stat cards, summary tiles, chart area, and recent activity panel
 - Profile page with editable account information
@@ -36,7 +36,6 @@ The goal is simple: give you a working Laravel base that is easy to read, extend
 /home          Home page
 /about         About page
 /login         Login page
-/register      Registration page
 /forgot-password
 /dashboard     Protected dashboard
 /dashboard/profile
@@ -55,7 +54,13 @@ The goal is simple: give you a working Laravel base that is easy to read, extend
 composer install
 ```
 
-Create or update your `.env` file with the correct app and database settings. This repository currently does not include a `.env.example`, so make sure these values exist:
+Create your local environment file:
+
+```bash
+cp .env.example .env
+```
+
+Then update the database values in `.env`:
 
 ```env
 APP_NAME="HighGuy_37 Starter Kit"
@@ -105,15 +110,13 @@ The dashboard contains a mix of real and placeholder data:
 Authentication is custom-built with local controllers:
 
 - `LoginController`
-- `RegisterController`
 - `PasswordResetController`
-- `ResetPasswordController`
 
 This project is not using Laravel Breeze or Jetstream.
 
 ## Known Notes
 
-- The repository currently has no `.env.example`; create your `.env` manually if needed.
+- Use `.env.example` as the template for local setup. Never commit real production secrets in `.env`.
 - The visible pages are powered by Blade, Bootstrap, and public CSS/JS files.
 - The dashboard chart and several dashboard counters are demo placeholders.
 - If old styles remain in the browser, run `php artisan view:clear` and hard refresh with `Ctrl + F5`.
@@ -124,7 +127,7 @@ This project is not using Laravel Breeze or Jetstream.
 - Add role and permission logic if your application needs admins, staff, or users.
 - Add CRUD modules for your project domain.
 - Add tests for authentication, profile updates, and dashboard access.
-- Create a `.env.example` for easier setup by other developers.
+- Add tests for any new CRUD modules you build.
 
 ## License
 

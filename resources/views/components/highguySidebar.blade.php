@@ -1,18 +1,18 @@
-﻿@php
+@php
     $isAdministrationMenuOpen = request()->is('dashboard/profile*') || request()->is('dashboard/settings*');
     $isMonitoringMenuOpen = request()->is('dashboard/notifications*');
 @endphp
 
 <aside id="sidebar" class="HighGuy_37-sidebar">
-    <div class="p-3 officer-sidebar-inner">
-        <div class="officer-sidebar-brand mb-4">
-            <div class="officer-sidebar-logo" aria-hidden="true">
+    <div class="p-3 highguy-sidebar-inner">
+        <div class="highguy-sidebar-brand mb-4">
+            <div class="highguy-sidebar-logo" aria-hidden="true">
                 <img src="{{ asset('img/logo.png') }}" alt="Logo"
                     style="width: 32px; height: 32px; border-radius: 6px;">
             </div>
-            <div class="officer-sidebar-brand-text">
-                <div class="officer-sidebar-brand-title">HighGuy_37</div>
-                <div class="officer-sidebar-brand-subtitle">Starter Kit</div>
+            <div class="highguy-sidebar-brand-text">
+                <div class="highguy-sidebar-brand-title">HighGuy_37</div>
+                <div class="highguy-sidebar-brand-subtitle">Starter Kit</div>
             </div>
         </div>
         <ul class="nav flex-column">
@@ -31,8 +31,8 @@
             </li>
 
 
-            <div class="officer-sidebar-footer">
-                <div class="officer-sidebar-footer__copy">&copy; 2025 HighGuy_37 Kit</div>
+            <div class="highguy-sidebar-footer">
+                <div class="highguy-sidebar-footer__copy">&copy; 2025 HighGuy_37 Kit</div>
             </div>
     </div>
 </aside>

@@ -31,11 +31,9 @@
 - [ ] Match reports to the nearest road segment
 - [ ] Match reports to related road rules where possible
 - [ ] Store matched segment/rule references for review
-- [ ] Show mapped reports on officer screens
 
 ## Phase 5: Evidence and Review Workflow
 - [ ] Upload and manage evidence files for reports
-- [ ] Build officer review dashboard
 - [ ] Add status updates, notes, and assignment workflow
 - [ ] Show report details together with map context
 - [ ] Add filters by status, date, segment, and rule type
@@ -45,11 +43,9 @@
 - [ ] Generate hotspot records from repeated incidents
 - [ ] Visualize hotspots on the map
 - [ ] Add severity and frequency indicators
-- [ ] Show trend summaries for officers
 
 ## Phase 7: Security, Audit, and Quality
 - [ ] Log sensitive actions in audit trails
-- [ ] Add authorization checks for officer/admin actions
 - [ ] Add tests for geospatial workflows and validations
 - [ ] Add seed data for road segments, rules, and sample reports
 - [ ] Review performance for map queries and uploads

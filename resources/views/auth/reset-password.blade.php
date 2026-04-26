@@ -11,20 +11,20 @@
                         <i class="bi bi-cone-striped auth-login-brand-icon" aria-hidden="true"></i>
                         <span>
                             <strong>HighGuy_37 Starter Kit</strong>
-                            <small>Authorized officer portal</small>
+                            <small>Secure project portal</small>
                         </span>
                     </a>
 
                     <div class="auth-login-copy">
-                        <h1>Set a new officer password</h1>
-                        <p>Create a fresh password for your road safety officer account and continue securely.</p>
+                        <h1>Set a new password</h1>
+                        <p>Create a fresh password for your account and continue securely.</p>
                     </div>
 
                     <div class="auth-login-guide">
                         <h3>How to complete this step</h3>
                         <ul>
                             <li>Use a password with at least 8 characters.</li>
-                            <li>Include letters and numbers for stronger officer account security.</li>
+                            <li>Include letters and numbers for stronger account security.</li>
                             <li>Confirm the same password before saving your update.</li>
                         </ul>
                     </div>
@@ -39,11 +39,11 @@
                         <div class="auth-login-title-row">
                             <h2 class="auth-login-title">
                                 <i class="bi bi-shield-lock"></i>
-                                <span>Reset Officer Password</span>
+                                <span>Reset Password</span>
                             </h2>
                         </div>
 
-                        <p class="auth-login-subtitle">Update your password below to regain secure access to the road safety system.</p>
+                        <p class="auth-login-subtitle">Update your password below to regain secure access to your project dashboard.</p>
 
                         @include('auth.partials.feedback')
 
@@ -102,7 +102,7 @@
                             <div class="auth-login-back-wrap">
                                 <a href="{{ route('login') }}" class="auth-login-back-link">
                                     <i class="bi bi-arrow-left"></i>
-                                    <span>Return to Officer Login</span>
+                                    <span>Return to Login</span>
                                 </a>
                             </div>
                         </form>

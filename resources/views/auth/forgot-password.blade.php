@@ -11,19 +11,19 @@
                         <img src="{{ asset('img/logo.png') }}" alt="Logo" class="auth-login-brand-icon">
                         <span>
                             <strong>HighGuy_37 Starter Kit</strong>
-                            <small>Authorized officer portal</small>
+                            <small>Secure project portal</small>
                         </span>
                     </a>
 
                     <div class="auth-login-copy">
-                        <h1>Recover officer account access</h1>
-                        <p>Enter your authorized email address and we will send a secure password reset link to restore access to the road safety system.</p>
+                        <h1>Recover account access</h1>
+                        <p>Enter your account email address and we will send a secure password reset link to restore access to your project dashboard.</p>
                     </div>
 
                     <div class="auth-login-guide">
                         <h3>How this works</h3>
                         <ul>
-                            <li>Enter the officer email address linked to your account.</li>
+                            <li>Enter the email address linked to your account.</li>
                             <li>The system checks whether that email exists in the authorized users list.</li>
                             <li>If it exists, a reset link is sent to that same email for secure recovery.</li>
                         </ul>
@@ -43,7 +43,7 @@
                             </h2>
                         </div>
 
-                        <p class="auth-login-subtitle">Use your officer email only. If the account exists, we will email a password reset link for secure access recovery.</p>
+                        <p class="auth-login-subtitle">Use your account email. If the account exists, we will email a password reset link for secure access recovery.</p>
 
                         @include('auth.partials.feedback')
 
@@ -54,7 +54,7 @@
                                 <label for="email">Email Address</label>
                                 <div class="auth-input-wrap auth-login-input @error('email') is-invalid @enderror">
                                     <i class="bi bi-envelope auth-input-icon"></i>
-                                    <input id="email" type="email" name="email" value="{{ old('email') }}" placeholder="officer@roadsafety.test" required autocomplete="email">
+                                    <input id="email" type="email" name="email" value="{{ old('email') }}" placeholder="user@example.com" required autocomplete="email">
                                 </div>
                                 @error('email')
                                     <div class="auth-field-error">{{ $message }}</div>

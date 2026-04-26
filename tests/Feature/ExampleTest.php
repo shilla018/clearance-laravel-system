@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Models\Officer;
+use App\Models\User;
 use Tests\TestCase;
 
 class ExampleTest extends TestCase
@@ -24,17 +24,15 @@ class ExampleTest extends TestCase
         $response->assertOk();
     }
 
-    public function test_authenticated_user_is_redirected_from_login_to_officer_dashboard(): void
+    public function test_authenticated_user_is_redirected_from_login_to_dashboard(): void
     {
-        $officer = new Officer([
-            'full_name' => 'Test Officer',
-            'email' => 'officer@example.com',
-            'password' => 'secret',
-            'role' => 'officer',
+        $user = new User([
+            'full_name' => 'Test User',
+            'email' => 'user@example.com',
         ]);
 
-        $response = $this->actingAs($officer)->get('/login');
+        $response = $this->actingAs($user)->get('/login');
 
-        $response->assertRedirect(route('officer.dashboard'));
+        $response->assertRedirect(route('dashboard.index'));
     }
 }

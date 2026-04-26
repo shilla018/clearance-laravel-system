@@ -43,7 +43,7 @@ body.sidebar-collapsed {
     box-sizing: border-box;
 }
 
-.officer-page-content {
+.highguy-page-content {
     width: 100%;
     max-width: 100%;
     min-width: 0;
@@ -51,25 +51,25 @@ body.sidebar-collapsed {
     scroll-behavior: smooth;
 }
 
-.officer-page-body {
+.highguy-page-body {
     width: 100%;
     max-width: 100%;
     min-width: 0;
     padding: 0 0 1.5rem;
 }
 
-.officer-page-body > .container,
-.officer-page-body > .container-fluid {
+.highguy-page-body > .container,
+.highguy-page-body > .container-fluid {
     width: 100%;
     max-width: 100%;
     min-width: 0;
 }
 
-.officer-page-body .row {
+.highguy-page-body .row {
     min-width: 0;
 }
 
-.officer-page-body [class*="col-"] {
+.highguy-page-body [class*="col-"] {
     min-width: 0;
 }
 
@@ -78,7 +78,7 @@ body.sidebar-collapsed {
         padding-left: 0;
     }
 
-    .officer-page-body {
+    .highguy-page-body {
         padding-bottom: 1rem;
     }
 }

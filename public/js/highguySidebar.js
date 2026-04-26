@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggleIcon = document.getElementById('sidebarToggleIcon');
     const activePageTitle = document.getElementById('activePageTitle');
     const body = document.body;
-    const desktopCollapseKey = 'officerSidebarCollapsed';
+    const desktopCollapseKey = 'highguySidebarCollapsed';
 
     if (!sidebar || !toggleBtn || !toggleIcon || !activePageTitle) {
         return;
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const activeLink = activeLinks[activeLinks.length - 1];
 
         if (!activeLink) {
-            return activePageTitle.dataset.defaultTitle || 'Officer Panel';
+            return activePageTitle.dataset.defaultTitle || 'User Panel';
         }
 
         const childLabel = getLinkLabel(activeLink);
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        return childLabel || activePageTitle.dataset.defaultTitle || 'Officer Panel';
+        return childLabel || activePageTitle.dataset.defaultTitle || 'User Panel';
     }
 
     function updateActivePageTitle() {
