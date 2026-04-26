@@ -23,7 +23,7 @@
 
         .feature-card {
             background: white;
-            padding: 40px;
+            padding: 24px;
             border-radius: 24px;
             border: 1px solid #e2e8f0;
             transition: all 0.3s ease;
@@ -37,16 +37,16 @@
         }
 
         .icon-circle {
-            width: 64px;
-            height: 64px;
+            width: 48px;
+            height: 48px;
             background: #eff6ff;
             color: #3b82f6;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            margin: 0 auto 24px;
+            font-size: 1.2rem;
+            margin: 0 auto 16px;
             transition: all 0.3s ease;
         }
 
@@ -77,12 +77,6 @@
             font-weight: 500;
             color: #64748b;
             margin: 4px;
-        }
-
-        .home-features-section {
-            min-height: calc(100vh - 56px);
-            display: flex;
-            align-items: flex-start;
         }
 
         .stack-usage-section {
@@ -278,37 +272,61 @@
         </div>
     </section>
 
-    <section class="home-features-section pt-5 pb-0 bg-white">
-        <div class="container pt-5 pb-0 text-center">
-            <h2 class="fw-bold mb-5">Everything You Need to Start</h2>
+    <section class="stack-usage-section py-5 bg-white">
+        <div class="container py-4">
+            <div class="row align-items-end mb-4">
+                <div class="col-lg-7">
+                    <span class="stack-usage-label">
+                        <i class="bi bi-box-seam"></i>
+                        Starter Features
+                    </span>
+                    <h2 class="fw-bold mb-3">Everything You Need to Start</h2>
+                    <p class="text-muted mb-lg-0">
+                        A clean Laravel foundation with ready-to-use essentials for building real-world applications
+                        faster.
+                    </p>
+                </div>
+                <div class="col-lg-5 text-lg-end">
+                    <a href="/login" class="btn btn-outline-primary px-4">
+                        Get Started <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="icon-circle"><i class="bi bi-shield-lock"></i></div>
-                        <h4 class="fw-bold"><i class="bi bi-shield-lock me-2"></i>Auth System</h4>
-                        <p class="text-muted">Ready-to-use login, registration, and password recovery powered by standard
-                            Laravel patterns.</p>
+                <div class="col-md-6 col-lg-4">
+                    <div class="stack-usage-card">
+                        <div class="stack-usage-icon"><i class="bi bi-shield-lock"></i></div>
+                        <h4 class="fw-bold mb-2">Auth System</h4>
+                        <p class="text-muted mb-0">
+                            Ready-to-use login, registration, and password recovery powered by standard Laravel patterns.
+                        </p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="icon-circle"><i class="bi bi-compass"></i></div>
-                        <h4 class="fw-bold"><i class="bi bi-grid-1x2 me-2"></i>Dashboard</h4>
-                        <p class="text-muted">A modern sidebar-based dashboard with basic stats and placeholders for your
-                            data.</p>
+                <div class="col-md-6 col-lg-4">
+                    <div class="stack-usage-card">
+                        <div class="stack-usage-icon"><i class="bi bi-layout-sidebar-inset"></i></div>
+                        <h4 class="fw-bold mb-2">Dashboard</h4>
+                        <p class="text-muted mb-0">
+                            A modern sidebar-based dashboard with basic stats and clean placeholders for your project
+                            data.
+                        </p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="icon-circle"><i class="bi bi-pencil-square"></i></div>
-                        <h4 class="fw-bold"><i class="bi bi-brush me-2"></i>Easy Theme</h4>
-                        <p class="text-muted">Clean Blade layouts and CSS structures that you can easily customize to fit
-                            your own project.</p>
+                <div class="col-md-6 col-lg-4">
+                    <div class="stack-usage-card">
+                        <div class="stack-usage-icon"><i class="bi bi-brush"></i></div>
+                        <h4 class="fw-bold mb-2">Easy Theme</h4>
+                        <p class="text-muted mb-0">
+                            Clean Blade layouts and CSS structures that you can quickly customize to fit your own brand.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+   
 
 
 @endsection
