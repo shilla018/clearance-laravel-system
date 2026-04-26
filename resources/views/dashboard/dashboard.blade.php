@@ -4,7 +4,7 @@
 <div class="container-fluid px-3 px-lg-4 py-4 dashboard-page">
     <div class="row g-3 g-xl-4 mb-4">
         @foreach ($stats as $stat)
-            <div class="col-12 col-sm-6 col-xxl-3">
+            <div class="col-6 col-xxl-3">
                 <article class="dashboard-stat-card dashboard-stat-card--{{ $stat['tone'] }}">
                     <div class="dashboard-stat-card__icon">
                         <i class="bi {{ $stat['icon'] }}"></i>
@@ -30,7 +30,7 @@
 
                 <div class="row g-3">
                     @foreach ($summaryTiles as $tile)
-                        <div class="col-12 col-sm-6 col-md-3">
+                        <div class="col-6 col-xl-3">
                             <article class="dashboard-summary-tile">
                                 <div class="dashboard-summary-tile__icon" style="flex-shrink: 0;">
                                     <i class="bi {{ $tile['icon'] }}"></i>

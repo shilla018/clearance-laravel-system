@@ -29,7 +29,7 @@
                     <div class="about-stat-grid">
                         <div class="about-stat-card">
                             <i class="bi bi-layers"></i>
-                            <strong>Laravel 13</strong>
+                            <strong>Laravel 12</strong>
                             <span>Modern framework baseline</span>
                         </div>
                         <div class="about-stat-card">
