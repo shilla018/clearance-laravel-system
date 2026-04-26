@@ -21,6 +21,24 @@
             background: radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
         }
 
+        .home-hero-title {
+            font-size: 4rem;
+            line-height: 1.08;
+        }
+
+        .home-hero-copy {
+            max-width: 600px;
+            font-size: 1.25rem;
+            line-height: 1.65;
+        }
+
+        .home-hero-actions {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 1rem;
+        }
+
         .feature-card {
             background: white;
             padding: 24px;
@@ -113,6 +131,7 @@
             border-radius: 12px;
             font-weight: 600;
             transition: all 0.3s ease;
+            white-space: nowrap;
         }
 
         .tech-pill {
@@ -187,6 +206,146 @@
             object-fit: contain;
             display: block;
         }
+
+        .home-section-title {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+
+        .stack-usage-card h4 {
+            font-size: 1.25rem;
+            line-height: 1.25;
+        }
+
+        .stack-usage-card p {
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        @media (max-width: 991.98px) {
+            .hero-section {
+                padding: 88px 0;
+            }
+
+            .home-hero-title {
+                font-size: 3rem;
+            }
+
+            .home-hero-copy {
+                max-width: 100%;
+                font-size: 1.08rem;
+            }
+
+            .home-section-title {
+                font-size: 1.75rem;
+            }
+
+            .hero-logo-card {
+                min-height: 280px;
+                margin-top: 2rem;
+                padding: 2rem !important;
+            }
+
+            .hero-logo-card img {
+                max-width: 280px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .hero-section {
+                padding: 64px 0 54px;
+            }
+
+            .hero-section::before {
+                width: 70%;
+                opacity: 0.7;
+            }
+
+            .home-hero-title {
+                font-size: 2.2rem;
+                line-height: 1.12;
+                margin-bottom: 1rem !important;
+            }
+
+            .home-hero-copy {
+                font-size: 0.98rem;
+                line-height: 1.62;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .home-hero-actions {
+                width: 100%;
+                gap: 0.55rem;
+            }
+
+            .home-hero-actions .btn-premium {
+                flex: 1 1 0;
+                min-width: 0;
+                padding: 0.75rem 0.55rem;
+                border-radius: 10px;
+                font-size: 0.78rem;
+                line-height: 1.2;
+            }
+
+            .home-hero-actions .btn-premium i {
+                margin-left: 0.25rem !important;
+                margin-right: 0.25rem !important;
+            }
+
+            .hero-logo-card {
+                min-height: 220px;
+                margin-top: 1.6rem;
+                padding: 1.4rem !important;
+                border-radius: 18px !important;
+            }
+
+            .hero-logo-card img {
+                max-width: 220px;
+            }
+
+            .tech-pill {
+                padding: 5px 12px;
+                font-size: 0.78rem;
+            }
+
+            .stack-usage-section {
+                padding-top: 2.4rem !important;
+                padding-bottom: 2.4rem !important;
+            }
+
+            .stack-usage-section .container {
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }
+
+            .home-section-title {
+                font-size: 1.45rem;
+            }
+
+            .stack-usage-card {
+                padding: 18px;
+            }
+
+            .stack-usage-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .stack-usage-card h4 {
+                font-size: 1.08rem;
+            }
+
+            .stack-usage-card p {
+                font-size: 0.88rem;
+                line-height: 1.58;
+            }
+
+            .stack-usage-label {
+                font-size: 0.74rem;
+                padding: 6px 11px;
+            }
+        }
     </style>
 @endpush
 
@@ -195,14 +354,14 @@
         <div class="container text-center text-lg-start">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <h1 class="display-3 fw-bold mb-4">Master Laravel with <span class="text-primary">HighGuy_37</span></h1>
-                    <p class="lead text-muted mb-5" style="max-width: 600px;">
+                    <h1 class="home-hero-title fw-bold mb-4">Master Laravel with <span class="text-primary">HighGuy_37</span></h1>
+                    <p class="home-hero-copy text-muted mb-5">
                         A beginner-friendly starter kit designed for students and developers to jumpstart their real-world
                         web applications. Built with Laravel, Bootstrap, and Best Practices.
                     </p>
-                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+                    <div class="home-hero-actions justify-content-center justify-content-lg-start">
                         <a href="/login" class="btn btn-primary btn-premium shadow-lg">
-                            Get Started Now <i class="bi bi-arrow-right ms-2"></i>
+                            Get Started <i class="bi bi-arrow-right ms-2"></i>
                         </a>
                         <a href="https://github.com/harryhagai" target="_blank" class="btn btn-outline-dark btn-premium">
                             <i class="bi bi-github me-2"></i> Star on GitHub
@@ -216,7 +375,7 @@
                         <div class="tech-pill">Blade</div>
                     </div>
                 </div>
-                <div class="col-lg-5 d-none d-lg-block">
+                <div class="col-lg-5">
                     <div class="hero-logo-card p-5 bg-white rounded-4 shadow-sm border">
                         <img src="{{ asset('img/Laravel Framework Logo White Mode Pin.jpg') }}"
                             alt="Laravel Framework Logo"
@@ -235,7 +394,7 @@
                         <i class="bi bi-layers"></i>
                         Tech Stack Usage
                     </span>
-                    <h2 class="fw-bold mb-3">Stacks Used in This Starter Kit</h2>
+                    <h2 class="home-section-title fw-bold mb-3">Stacks Used in This Starter Kit</h2>
                     <p class="text-muted mb-lg-0">
                         These are the core technologies behind this starter kit and how each one supports the application
                         during development.
@@ -311,7 +470,7 @@
                         <i class="bi bi-box-seam"></i>
                         Starter Features
                     </span>
-                    <h2 class="fw-bold mb-3">Everything You Need to Start</h2>
+                    <h2 class="home-section-title fw-bold mb-3">Everything You Need to Start</h2>
                     <p class="text-muted mb-lg-0">
                         A clean Laravel foundation with ready-to-use essentials for building real-world applications
                         faster.

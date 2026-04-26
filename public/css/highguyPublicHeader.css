@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
+  padding-top: var(--public-header-height, 76px);
   background:
     radial-gradient(circle at top, rgba(16, 152, 212, 0.08), transparent 24%),
     linear-gradient(180deg, #ffffff, #f5fbff 58%, #e8f4fb 100%);
@@ -11,8 +12,11 @@ body {
   background: rgba(255, 255, 255, 0.94);
   color: var(--color-text, #1d2a36);
   padding: 0.9rem 0;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1000;
   backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(16, 152, 212, 0.08);
@@ -166,6 +170,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: var(--public-header-height-mobile, 82px);
+  }
+
   .header-toggle {
     width: 52px;
     height: 52px;

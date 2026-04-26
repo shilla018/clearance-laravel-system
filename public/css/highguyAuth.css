@@ -600,10 +600,7 @@
 .auth-brand-panel {
     position: relative;
     padding: clamp(1.8rem, 4vw, 3rem);
-    background:
-        radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.25), transparent 26%),
-        radial-gradient(circle at 85% 16%, rgba(255, 255, 255, 0.2), transparent 18%),
-        linear-gradient(155deg, var(--auth-primary-dark) 0%, var(--auth-primary) 48%, var(--auth-accent) 100%);
+    background: var(--color-primary-500, #3b82f6);
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -620,19 +617,11 @@
 }
 
 .auth-brand-panel::before {
-    width: 230px;
-    height: 230px;
-    right: -70px;
-    top: -80px;
-    background: rgba(255, 255, 255, 0.1);
+    display: none;
 }
 
 .auth-brand-panel::after {
-    width: 220px;
-    height: 220px;
-    left: -88px;
-    bottom: -110px;
-    background: rgba(255, 255, 255, 0.08);
+    display: none;
 }
 
 .auth-brand-mark,
