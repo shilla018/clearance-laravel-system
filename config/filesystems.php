@@ -3,9 +3,9 @@
 return [
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Default Filesystem Disk
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Here you may specify the default filesystem disk that should be used
     | by the framework. The "local" disk, as well as a variety of cloud
@@ -16,9 +16,9 @@ return [
     'default' => env('FILESYSTEM_DISK', 'local'),
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Filesystem Disks
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Below you may configure as many filesystem disks as necessary, and you
     | may even configure multiple disks for the same driver. Examples for
@@ -63,9 +63,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Symbolic Links
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Here you may configure the symbolic links that will be created when the
     | `storage:link` Artisan command is executed. The array keys should be

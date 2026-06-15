@@ -3,9 +3,9 @@
 return [
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Validation Language Lines
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | The following language lines contain the default error messages used by
     | the validator class. Some of these rules have multiple versions such
@@ -168,9 +168,9 @@ return [
     'uuid' => 'The :attribute field must be a valid UUID.',
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Custom Validation Language Lines
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Here you may specify custom validation messages for attributes using the
     | convention "attribute.rule" to name the lines. This makes it quick to
@@ -185,9 +185,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Custom Validation Attributes
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | The following language lines are used to swap our attribute placeholder
     | with something more reader friendly such as "E-Mail Address" instead

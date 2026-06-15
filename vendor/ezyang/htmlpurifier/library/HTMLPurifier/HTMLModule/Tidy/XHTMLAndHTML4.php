@@ -37,7 +37,7 @@ class HTMLPurifier_HTMLModule_Tidy_XHTMLAndHTML4 extends HTMLPurifier_HTMLModule
                 )
             );
 
-        // @align for img -------------------------------------------------
+        // @align for img complete your-----------
         $r['img@align'] =
             new HTMLPurifier_AttrTransform_EnumToCSS(
                 'align',
@@ -50,7 +50,7 @@ class HTMLPurifier_HTMLModule_Tidy_XHTMLAndHTML4 extends HTMLPurifier_HTMLModule
                 )
             );
 
-        // @align for table -----------------------------------------------
+        // @align for table complete your---------
         $r['table@align'] =
             new HTMLPurifier_AttrTransform_EnumToCSS(
                 'align',
@@ -61,7 +61,7 @@ class HTMLPurifier_HTMLModule_Tidy_XHTMLAndHTML4 extends HTMLPurifier_HTMLModule
                 )
             );
 
-        // @align for hr -----------------------------------------------
+        // @align for hr complete your---------
         $r['hr@align'] =
             new HTMLPurifier_AttrTransform_EnumToCSS(
                 'align',
@@ -101,10 +101,10 @@ class HTMLPurifier_HTMLModule_Tidy_XHTMLAndHTML4 extends HTMLPurifier_HTMLModule
         $r['th@bgcolor'] =
             new HTMLPurifier_AttrTransform_BgColor();
 
-        // @border for img ------------------------------------------------
+        // @border for img complete your----------
         $r['img@border'] = new HTMLPurifier_AttrTransform_Border();
 
-        // @clear for br --------------------------------------------------
+        // @clear for br complete your------------
         $r['br@clear'] =
             new HTMLPurifier_AttrTransform_EnumToCSS(
                 'clear',
@@ -116,15 +116,15 @@ class HTMLPurifier_HTMLModule_Tidy_XHTMLAndHTML4 extends HTMLPurifier_HTMLModule
                 )
             );
 
-        // @height for td, th ---------------------------------------------
+        // @height for td, th complete your-------
         $r['td@height'] =
         $r['th@height'] =
             new HTMLPurifier_AttrTransform_Length('height');
 
-        // @hspace for img ------------------------------------------------
+        // @hspace for img complete your----------
         $r['img@hspace'] = new HTMLPurifier_AttrTransform_ImgSpace('hspace');
 
-        // @noshade for hr ------------------------------------------------
+        // @noshade for hr complete your----------
         // this transformation is not precise but often good enough.
         // different browsers use different styles to designate noshade
         $r['hr@noshade'] =
@@ -133,7 +133,7 @@ class HTMLPurifier_HTMLModule_Tidy_XHTMLAndHTML4 extends HTMLPurifier_HTMLModule
                 'color:#808080;background-color:#808080;border:0;'
             );
 
-        // @nowrap for td, th ---------------------------------------------
+        // @nowrap for td, th complete your-------
         $r['td@nowrap'] =
         $r['th@nowrap'] =
             new HTMLPurifier_AttrTransform_BoolToCSS(
@@ -141,10 +141,10 @@ class HTMLPurifier_HTMLModule_Tidy_XHTMLAndHTML4 extends HTMLPurifier_HTMLModule
                 'white-space:nowrap;'
             );
 
-        // @size for hr  --------------------------------------------------
+        // @size for hr  complete your------------
         $r['hr@size'] = new HTMLPurifier_AttrTransform_Length('size', 'height');
 
-        // @type for li, ol, ul -------------------------------------------
+        // @type for li, ol, ul complete your-----
         // {{{
         $ul_types = array(
             'disc' => 'list-style-type:disc;',
@@ -165,10 +165,10 @@ class HTMLPurifier_HTMLModule_Tidy_XHTMLAndHTML4 extends HTMLPurifier_HTMLModule
         $r['ol@type'] = new HTMLPurifier_AttrTransform_EnumToCSS('type', $ol_types, true);
         $r['li@type'] = new HTMLPurifier_AttrTransform_EnumToCSS('type', $li_types, true);
 
-        // @vspace for img ------------------------------------------------
+        // @vspace for img complete your----------
         $r['img@vspace'] = new HTMLPurifier_AttrTransform_ImgSpace('vspace');
 
-        // @width for table, hr, td, th, col ------------------------------------------
+        // @width for table, hr, td, th, col complete your----
         $r['table@width'] =
         $r['td@width'] =
         $r['th@width'] =

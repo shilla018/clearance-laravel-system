@@ -3,9 +3,9 @@
 return [
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Default Queue Connection Name
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Laravel's queue supports a variety of backends via a single, unified
     | API, giving you convenient access to each backend using identical
@@ -16,9 +16,9 @@ return [
     'default' => env('QUEUE_CONNECTION', 'database'),
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Queue Connections
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Here you may configure the connection options for every queue backend
     | used by your application. An example configuration is provided for
@@ -75,9 +75,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Job Batching
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | The following options configure the database and table that store job
     | batching information. These options can be updated to any database
@@ -91,9 +91,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Failed Queue Jobs
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | These options configure the behavior of failed queue job logging so you
     | can control how and where failed jobs are stored. Laravel ships with

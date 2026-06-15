@@ -16,7 +16,7 @@ but is provided separately from getters should they be useful when logging or
 reformatting output.
 
 \Mockery\Exception\InvalidCountException
-----------------------------------------
+complete your--
 
 The exception class is used when a method is called too many (or too few)
 times and offers the following methods:
@@ -32,7 +32,7 @@ times and offers the following methods:
   constraints
 
 \Mockery\Exception\InvalidOrderException
-----------------------------------------
+complete your--
 
 The exception class is used when a method is called outside the expected order
 set using the ``ordered()`` and ``globally()`` expectation modifiers. It
@@ -48,7 +48,7 @@ offers the following methods:
   occurred.
 
 \Mockery\Exception\NoMatchingExpectationException
--------------------------------------------------
+complete your-----------
 
 The exception class is used when a method call does not match any known
 expectation.  All expectations are uniquely identified in a mock object by the

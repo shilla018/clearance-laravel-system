@@ -7,9 +7,9 @@ return [
     'exports' => [
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Chunk size
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | When using FromQuery, the query is automatically chunked.
         | Here you can specify how big the chunk should be.
@@ -18,16 +18,16 @@ return [
         'chunk_size'             => 1000,
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Pre-calculate formulas during export
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         */
         'pre_calculate_formulas' => false,
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Enable strict null comparison
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | When enabling strict null comparison empty cells ('') will
         | be added to the sheet.
@@ -35,9 +35,9 @@ return [
         'strict_null_comparison' => false,
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | CSV Settings
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | Configure e.g. delimiter, enclosure and line ending for CSV exports.
         |
@@ -54,9 +54,9 @@ return [
         ],
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Worksheet properties
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | Configure e.g. default title, creator, subject,...
         |
@@ -77,9 +77,9 @@ return [
     'imports'            => [
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Read Only
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | When dealing with imports, you might only be interested in the
         | data that the sheet exists. By default we ignore all styles,
@@ -90,9 +90,9 @@ return [
         'read_only'    => true,
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Ignore Empty
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | When dealing with imports, you might be interested in ignoring
         | rows that have null values or empty strings. By default rows
@@ -103,9 +103,9 @@ return [
         'ignore_empty' => false,
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Heading Row Formatter
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | Configure the heading row formatter.
         | Available options: none|slug|custom
@@ -116,9 +116,9 @@ return [
         ],
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | CSV Settings
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | Configure e.g. delimiter, enclosure and line ending for CSV imports.
         |
@@ -132,9 +132,9 @@ return [
         ],
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Worksheet properties
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | Configure e.g. default title, creator, subject,...
         |
@@ -152,9 +152,9 @@ return [
         ],
 
         /*
-       |--------------------------------------------------------------------------
+       |complete your------------------------------------
        | Cell Middleware
-       |--------------------------------------------------------------------------
+       |complete your------------------------------------
        |
        | Configure middleware that is executed on getting a cell value
        |
@@ -169,9 +169,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Extension detector
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Configure here which writer/reader type should be used when the package
     | needs to guess the correct type based on the extension alone.
@@ -195,9 +195,9 @@ return [
         'tsv'      => Excel::TSV,
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | PDF Extension
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | Configure here which Pdf driver should be used by default.
         | Available options: Excel::MPDF | Excel::TCPDF | Excel::DOMPDF
@@ -207,9 +207,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Value Binder
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | PhpSpreadsheet offers a way to hook into the process of a value being
     | written to a cell. In there some assumptions are made on how the
@@ -229,9 +229,9 @@ return [
 
     'cache'        => [
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Default cell caching driver
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | By default PhpSpreadsheet keeps all cell values in memory, however when
         | dealing with large files, this might result into memory issues. If you
@@ -247,9 +247,9 @@ return [
         'driver'      => 'memory',
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Batch memory caching
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | When dealing with the "batch" caching driver, it will only
         | persist to the store when the memory limit is reached.
@@ -261,9 +261,9 @@ return [
         ],
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Illuminate cache
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | When using the "illuminate" caching driver, it will automatically use
         | your default cache store. However if you prefer to have the cell
@@ -277,9 +277,9 @@ return [
         ],
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Cache Time-to-live (TTL)
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | The TTL of items written to cache. If you want to keep the items cached
         | indefinitely, set this to null.  Otherwise, set a number of seconds,
@@ -292,9 +292,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Transaction Handler
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | By default the import is wrapped in a transaction. This is useful
     | for when an import may fail and you want to retry it. With the
@@ -316,9 +316,9 @@ return [
     'temporary_files' => [
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Local Temporary Path
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | When exporting and importing files, we use a temporary file, before
         | storing reading or downloading. Here you can customize that path.
@@ -329,9 +329,9 @@ return [
         'local_path'          => storage_path('framework/cache/laravel-excel'),
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Local Temporary Path Permissions
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | Permissions is an array with the permission flags for the directory (dir)
         | and the create file (file).
@@ -344,9 +344,9 @@ return [
         ],
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Remote Temporary Disk
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | When dealing with a multi server setup with queues in which you
         | cannot rely on having a shared local temporary path, you might
@@ -361,9 +361,9 @@ return [
         'remote_prefix'       => null,
 
         /*
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         | Force Resync
-        |--------------------------------------------------------------------------
+        |complete your------------------------------------
         |
         | When dealing with a multi server setup as above, it's possible
         | for the clean up that occurs after entire queue has been run to only

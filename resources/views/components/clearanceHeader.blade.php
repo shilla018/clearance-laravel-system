@@ -14,9 +14,9 @@
             <i id="sidebarToggleIcon" class="bi bi-layout-sidebar-inset fs-5"></i>
         </button>
 
-        <div id="activePageTitle" class="header-page-pill" data-default-title="Dashboard Panel">
+        <div id="activePageTitle" class="header-page-pill" data-default-title="Student Portal">
             <span class="header-page-dot" aria-hidden="true"></span>
-            <span class="header-page-label">Dashboard Panel</span>
+            <span class="header-page-label">Student Portal</span>
         </div>
     </div>
 
@@ -41,6 +41,18 @@
                     <a href="{{ route('dashboard.index') }}" class="dropdown-item d-flex align-items-center gap-2 py-2">
                         <i class="bi bi-speedometer2 header-theme-icon"></i>
                         <span>Dashboard</span>
+                    </a>
+                    <a href="{{ route('dashboard.payments.index') }}" class="dropdown-item d-flex align-items-center gap-2 py-2">
+                        <i class="bi bi-credit-card header-theme-icon"></i>
+                        <span>Payments</span>
+                    </a>
+                    <a href="{{ route('dashboard.results.index') }}" class="dropdown-item d-flex align-items-center gap-2 py-2">
+                        <i class="bi bi-journal-check header-theme-icon"></i>
+                        <span>Results</span>
+                    </a>
+                    <a href="{{ route('dashboard.clearance.index') }}" class="dropdown-item d-flex align-items-center gap-2 py-2">
+                        <i class="bi bi-clipboard-check header-theme-icon"></i>
+                        <span>Clearance</span>
                     </a>
                     <a href="{{ route('dashboard.profile.show') }}" class="dropdown-item d-flex align-items-center gap-2 py-2">
                         <i class="bi bi-person header-theme-icon"></i>

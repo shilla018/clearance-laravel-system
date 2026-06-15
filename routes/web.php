@@ -12,6 +12,10 @@ Route::view('/about', 'about')->name('about');
 
 Route::middleware('auth')->prefix('dashboard')->name('dashboard.')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('index');
+    Route::get('/payments', [DashboardController::class, 'payments'])->name('payments.index');
+    Route::get('/results', [DashboardController::class, 'results'])->name('results.index');
+    Route::get('/clearance', [DashboardController::class, 'clearance'])->name('clearance.index');
+    Route::post('/clearance', [DashboardController::class, 'submitClearance'])->name('clearance.submit');
     
     // Notifications
     Route::get('/notifications', [NotificationController::class, 'index'])->name('notifications.index');

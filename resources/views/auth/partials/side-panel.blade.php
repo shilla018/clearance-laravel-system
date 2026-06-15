@@ -6,10 +6,10 @@
 
 <aside class="auth-brand-panel">
     <a href="{{ route('home') }}" class="auth-brand-mark">
-        <img src="{{ asset('img/logo.png') }}" alt="HighGuy_37 Logo" style="width: 48px; height: 48px; border-radius: 8px;">
+        <img src="{{ asset('img/logo.png') }}" alt="Clearance Logo" style="width: 48px; height: 48px; border-radius: 8px;">
         <span class="auth-brand-copy">
-            <strong>HighGuy_37-KIT</strong>
-            <span>HighGuy_37 Starter Kit</span>
+            <strong>Clearance-KIT</strong>
+            <span>Clearance Starter Kit</span>
         </span>
     </a>
 

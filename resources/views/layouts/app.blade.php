@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>@yield('title', 'HighGuy_37 Starter Kit')</title>
+    <title>@yield('title', 'Clearance Starter Kit')</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 
     <!-- Bootstrap 5 CSS -->
@@ -20,10 +20,10 @@
 
 
     <!-- Custom CSS -->
-    <link href="{{ asset('css/highguyPublicHeader.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/highguyPublicFooter.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/clearancePublicHeader.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/clearancePublicFooter.css') }}" rel="stylesheet">
 
-    <link href="{{ asset('css/highguyAuth.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/clearanceAuth.css') }}" rel="stylesheet">
     @stack('critical-head')
     @stack('styles')
     <style>
@@ -79,8 +79,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="{{ asset('js/highguyPublicHeader.js') }}"></script>
-    <script src="{{ asset('js/highguyButtonSpinner.js') }}"></script>
+    <script src="{{ asset('js/clearancePublicHeader.js') }}"></script>
+    <script src="{{ asset('js/clearanceButtonSpinner.js') }}"></script>
     @yield('scripts')
     @stack('scripts')
 

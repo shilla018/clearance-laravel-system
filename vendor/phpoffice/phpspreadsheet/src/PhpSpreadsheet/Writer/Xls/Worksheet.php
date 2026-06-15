@@ -20,7 +20,7 @@ use PhpOffice\PhpSpreadsheet\Worksheet\SheetView;
 use PhpOffice\PhpSpreadsheet\Writer\Exception as WriterException;
 
 // Original file header of PEAR::Spreadsheet_Excel_Writer_Worksheet (used as the base for this class):
-// -----------------------------------------------------------------------------------------
+// complete yourcomplete your-------------
 // /*
 // *  Module written/ported by Xavier Noguer <xnoguer@rezebra.com>
 // *

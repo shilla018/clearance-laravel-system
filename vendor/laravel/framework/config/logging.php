@@ -8,9 +8,9 @@ use Monolog\Processor\PsrLogMessageProcessor;
 return [
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Default Log Channel
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | This option defines the default log channel that is utilized to write
     | messages to your logs. The value provided here should match one of
@@ -21,9 +21,9 @@ return [
     'default' => env('LOG_CHANNEL', 'stack'),
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Deprecations Log Channel
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | This option controls the log channel that should be used to log warnings
     | regarding deprecated PHP and library features. This allows you to get
@@ -37,9 +37,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Log Channels
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Here you may configure the log channels for your application. Laravel
     | utilizes the Monolog PHP logging library, which includes a variety

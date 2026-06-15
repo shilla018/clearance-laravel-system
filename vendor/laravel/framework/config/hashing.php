@@ -3,9 +3,9 @@
 return [
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Default Hash Driver
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | This option controls the default hash driver that will be used to hash
     | passwords for your application. By default, the bcrypt algorithm is
@@ -18,9 +18,9 @@ return [
     'driver' => env('HASH_DRIVER', 'bcrypt'),
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Bcrypt Options
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Here you may specify the configuration options that should be used when
     | passwords are hashed using the Bcrypt algorithm. This will allow you
@@ -35,9 +35,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Argon Options
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Here you may specify the configuration options that should be used when
     | passwords are hashed using the Argon algorithm. These will allow you
@@ -53,9 +53,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Rehash On Login
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Setting this option to true will tell Laravel to automatically rehash
     | the user's password during login if the configured work factor for

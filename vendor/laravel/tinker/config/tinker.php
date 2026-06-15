@@ -3,9 +3,9 @@
 return [
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Console Commands
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | This option allows you to add additional Artisan commands that should
     | be available within the Tinker environment. Once the command is in
@@ -18,9 +18,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Auto Aliased Classes
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Tinker will not automatically alias classes in your vendor namespaces
     | but you may explicitly allow a subset of classes to get aliased by
@@ -33,9 +33,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Classes That Should Not Be Aliased
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Typically, Tinker automatically aliases classes as you require them in
     | Tinker. However, you may wish to never alias certain classes, which
@@ -48,9 +48,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Project Trust Mode
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | PsySH restricts local project features unless your project is trusted.
     | Set this to "always" to avoid untrusted project warnings in Tinker.

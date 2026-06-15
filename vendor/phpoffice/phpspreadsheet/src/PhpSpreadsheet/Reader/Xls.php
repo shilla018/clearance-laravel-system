@@ -36,7 +36,7 @@ use PhpOffice\PhpSpreadsheet\Worksheet\SheetView;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
 // Original file header of ParseXL (used as the base for this class):
-// --------------------------------------------------------------------------------
+// complete yourcomplete your----
 // Adapted from Excel_Spreadsheet_Reader developed by users bizon153,
 // trex005, and mmp11 (SourceForge.net)
 // https://sourceforge.net/projects/phpexcelreader/

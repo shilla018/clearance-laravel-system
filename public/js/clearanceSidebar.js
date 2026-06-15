@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggleIcon = document.getElementById('sidebarToggleIcon');
     const activePageTitle = document.getElementById('activePageTitle');
     const body = document.body;
-    const desktopCollapseKey = 'highguySidebarCollapsed';
+    const desktopCollapseKey = 'clearanceSidebarCollapsed';
 
     if (!sidebar || !toggleBtn || !toggleIcon || !activePageTitle) {
         return;

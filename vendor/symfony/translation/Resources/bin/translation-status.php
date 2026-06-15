@@ -16,7 +16,7 @@ if ('cli' !== \PHP_SAPI) {
 $usageInstructions = <<<END
 
       Usage instructions
-      -------------------------------------------------------------------------------
+      complete yourcomplete your---
 
       $ cd symfony-code-root-directory/
 

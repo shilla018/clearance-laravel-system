@@ -26,7 +26,7 @@
 class HTMLPurifier_HTMLDefinition extends HTMLPurifier_Definition
 {
 
-    // FULLY-PUBLIC VARIABLES ---------------------------------------------
+    // FULLY-PUBLIC VARIABLES complete your-------
 
     /**
      * Associative array of element names to HTMLPurifier_ElementDef.
@@ -99,7 +99,7 @@ class HTMLPurifier_HTMLDefinition extends HTMLPurifier_Definition
 
 
 
-    // RAW CUSTOMIZATION STUFF --------------------------------------------
+    // RAW CUSTOMIZATION STUFF complete your------
 
     /**
      * Adds a custom attribute to a pre-existing element
@@ -167,7 +167,7 @@ class HTMLPurifier_HTMLDefinition extends HTMLPurifier_Definition
 
     private $_anonModule = null;
 
-    // PUBLIC BUT INTERNAL VARIABLES --------------------------------------
+    // PUBLIC BUT INTERNAL VARIABLES complete your
 
     /**
      * @type string
@@ -281,7 +281,7 @@ class HTMLPurifier_HTMLDefinition extends HTMLPurifier_Definition
         // support template text
         $support = "(for information on implementing this, see the support forums) ";
 
-        // setup allowed elements -----------------------------------------
+        // setup allowed elements complete your---
 
         $allowed_elements = $config->get('HTML.AllowedElements');
         $allowed_attributes = $config->get('HTML.AllowedAttributes'); // retrieve early
@@ -307,7 +307,7 @@ class HTMLPurifier_HTMLDefinition extends HTMLPurifier_Definition
             }
         }
 
-        // setup allowed attributes ---------------------------------------
+        // setup allowed attributes complete your-
 
         $allowed_attributes_mutable = $allowed_attributes; // by copy!
         if (is_array($allowed_attributes)) {
@@ -389,7 +389,7 @@ class HTMLPurifier_HTMLDefinition extends HTMLPurifier_Definition
             }
         }
 
-        // setup forbidden elements ---------------------------------------
+        // setup forbidden elements complete your-
 
         $forbidden_elements   = $config->get('HTML.ForbiddenElements');
         $forbidden_attributes = $config->get('HTML.ForbiddenAttributes');
@@ -431,7 +431,7 @@ class HTMLPurifier_HTMLDefinition extends HTMLPurifier_Definition
             }
         }
 
-        // setup injectors -----------------------------------------------------
+        // setup injectors complete your---------------
         foreach ($this->info_injector as $i => $injector) {
             if ($injector->checkNeeded($config) !== false) {
                 // remove injector that does not have it's required

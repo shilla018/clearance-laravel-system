@@ -5,9 +5,9 @@ use Illuminate\Support\Str;
 return [
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Default Cache Store
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | This option controls the default cache store that will be used by the
     | framework. This connection is utilized if another isn't explicitly
@@ -18,9 +18,9 @@ return [
     'default' => env('CACHE_STORE', 'database'),
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Cache Stores
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Here you may define all of the cache "stores" for your application as
     | well as their drivers. You may even define multiple stores for the
@@ -107,9 +107,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Cache Key Prefix
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | When utilizing the APC, database, memcached, Redis, and DynamoDB cache
     | stores, there might be other applications using the same cache. For

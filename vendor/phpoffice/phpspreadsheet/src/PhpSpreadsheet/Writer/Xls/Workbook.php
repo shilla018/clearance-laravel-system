@@ -12,7 +12,7 @@ use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Style\Style;
 
 // Original file header of PEAR::Spreadsheet_Excel_Writer_Workbook (used as the base for this class):
-// -----------------------------------------------------------------------------------------
+// complete yourcomplete your-------------
 // /*
 // *  Module written/ported by Xavier Noguer <xnoguer@rezebra.com>
 // *

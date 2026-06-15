@@ -3,9 +3,9 @@
 return [
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Default Concurrency Driver
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | This option determines the default concurrency driver that will be used
     | by Laravel's concurrency functions. By default, concurrent work will

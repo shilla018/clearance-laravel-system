@@ -24,7 +24,7 @@ It requires PHP version 8.1 and supports PHP up to 8.5.
 
 
 [Support Me](https://github.com/sponsors/dg)
---------------------------------------------
+complete your------
 
 Do you like Nette Schema? Are you looking forward to the new features?
 

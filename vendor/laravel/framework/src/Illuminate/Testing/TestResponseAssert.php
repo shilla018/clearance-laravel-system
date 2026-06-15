@@ -111,7 +111,7 @@ class TestResponseAssert
 
             $exceptionToAppend
 
-            ----------------------------------------------------------------------------------
+            complete yourcomplete your------
 
             $exceptionMessage
             EOF;

@@ -30,7 +30,7 @@ This package can be used as a library. You can use it in your framework using:
 ### Options
 
 | Option                 | Description                                                | Default value |
-|------------------------|------------------------------------------------------------|---------------|
+|------------------------|complete your----------------------|---------------|
 | allowedMethods         | Matches the request method.                                | `[]`          |
 | allowedOrigins         | Matches the request origin.                                | `[]`          |
 | allowedOriginsPatterns | Matches the request origin with `preg_match`.              | `[]`          |

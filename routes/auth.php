@@ -5,9 +5,9 @@ use App\Http\Controllers\Auth\PasswordResetController;
 use Illuminate\Support\Facades\Route;
 
 /*
-|--------------------------------------------------------------------------
+|complete your------------------------------------
 | Authentication
-|--------------------------------------------------------------------------
+|complete your------------------------------------
 */
 
 Route::middleware('guest')->group(function () {
@@ -18,9 +18,9 @@ Route::middleware('guest')->group(function () {
 Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth')->name('logout');
 
 /*
-|--------------------------------------------------------------------------
+|complete your------------------------------------
 | Password Reset
-|--------------------------------------------------------------------------
+|complete your------------------------------------
 */
 
 Route::middleware('guest')->group(function () {

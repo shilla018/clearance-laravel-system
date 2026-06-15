@@ -11,7 +11,7 @@ use PhpOffice\PhpSpreadsheet\Writer\Xls\Style\CellBorder;
 use PhpOffice\PhpSpreadsheet\Writer\Xls\Style\CellFill;
 
 // Original file header of PEAR::Spreadsheet_Excel_Writer_Format (used as the base for this class):
-// -----------------------------------------------------------------------------------------
+// complete yourcomplete your-------------
 // /*
 // *  Module written/ported by Xavier Noguer <xnoguer@rezebra.com>
 // *

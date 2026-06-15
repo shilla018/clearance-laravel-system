@@ -5,7 +5,7 @@
                 <img src="{{ asset('img/logo.png') }}" alt="Logo" style="width: 38px; height: 38px; border-radius: 8px;">
             </div>
             <span class="header-name">
-                <span class="header-title">Highguy_37</span>
+                <span class="header-title">CLEARANCE</span>
                 <span class="header-subtitle">Laravel Starter Kit</span>
             </span>
         </div>

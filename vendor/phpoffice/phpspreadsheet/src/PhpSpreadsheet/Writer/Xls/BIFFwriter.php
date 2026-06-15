@@ -5,7 +5,7 @@ namespace PhpOffice\PhpSpreadsheet\Writer\Xls;
 use PhpOffice\PhpSpreadsheet\Writer\Exception as WriterException;
 
 // Original file header of PEAR::Spreadsheet_Excel_Writer_BIFFwriter (used as the base for this class):
-// -----------------------------------------------------------------------------------------
+// complete yourcomplete your-------------
 // *  Module written/ported by Xavier Noguer <xnoguer@rezebra.com>
 // *
 // *  The majority of this is _NOT_ my code.  I simply ported it from the

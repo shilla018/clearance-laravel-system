@@ -70,7 +70,7 @@ name:
 This method is a convenience method for calling ``shouldReceive()->never()``.
 
 Declaring Method Argument Expectations
---------------------------------------
+complete your
 
 For every method we declare expectation for, we can add constraints that the
 defined expectations apply only to the method calls that match the expected

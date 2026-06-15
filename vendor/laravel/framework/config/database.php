@@ -5,9 +5,9 @@ use Illuminate\Support\Str;
 return [
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Default Database Connection Name
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Here you may specify which of the database connections below you wish
     | to use as your default connection for database operations. This is
@@ -19,9 +19,9 @@ return [
     'default' => env('DB_CONNECTION', 'sqlite'),
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Database Connections
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Below are all of the database connections defined for your application.
     | An example configuration is provided for each database system which
@@ -118,9 +118,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Migration Repository Table
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | This table keeps track of all the migrations that have already run for
     | your application. Using this information, we can determine which of
@@ -134,9 +134,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Redis Databases
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Redis is an open source, fast, and advanced key-value store that also
     | provides a richer body of commands than a typical key-value system

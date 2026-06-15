@@ -3,16 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>HighGuy_37 Dashboard | HighGuy_37 Starter Kit</title>
+    <title>Student Information Management System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="{{ asset('css/rootcolor.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/highguyHeader.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/highguySidebar.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/highguyLayout.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/clearanceHeader.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/clearanceSidebar.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/clearanceLayout.css') }}" rel="stylesheet">
     @stack('styles')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -21,8 +21,20 @@
     @php
         $pageHeader = match (true) {
             request()->is('dashboard') || request()->routeIs('dashboard.index') => [
-                'title' => 'System Dashboard',
-                'subtitle' => 'Monitor your application performance and stats from one workspace.',
+                'title' => 'Student Dashboard',
+                'subtitle' => 'View your registration status, payments, results, and clearance readiness.',
+            ],
+            request()->routeIs('dashboard.payments.*') => [
+                'title' => 'Student Payments',
+                'subtitle' => 'Review paid invoices, pending balances, and payment control numbers.',
+            ],
+            request()->routeIs('dashboard.results.*') => [
+                'title' => 'Published Results',
+                'subtitle' => 'Check your semester results, GPA, points, and remarks.',
+            ],
+            request()->routeIs('dashboard.clearance.*') => [
+                'title' => 'Clearance Application',
+                'subtitle' => 'Submit and track your institutional clearance request.',
             ],
             request()->is('dashboard/notifications*') => [
                 'title' => 'Direct Notifications',
@@ -43,15 +55,15 @@
         };
     @endphp
 
-    @include('components.highguyHeader')
-    @include('components.highguySidebar')
+    @include('components.clearanceHeader')
+    @include('components.clearanceSidebar')
 
     <main class="dashboard-page-content" @if($pageHeader) data-dashboard-page-header="true" @endif>
         @if ($pageHeader)
             <div class="px-3 px-lg-4 pt-4">
                 <section class="dashboard-shared-page-header">
                     <div class="dashboard-shared-page-header__content">
-                        <x-highguy-page-header :title="$pageHeader['title']" :subtitle="$pageHeader['subtitle']" />
+                        <x-clearance-page-header :title="$pageHeader['title']" :subtitle="$pageHeader['subtitle']" />
                     </div>
 
                     @hasSection('page_header_actions')
@@ -89,7 +101,7 @@
             gap: 0.75rem;
             flex-shrink: 0;
         }
-        .highguy-shared-page-header__title {
+        .clearance-shared-page-header__title {
             margin: 0;
             font-size: clamp(1.2rem, 1.5vw, 1.5rem);
             line-height: 1.25;
@@ -101,7 +113,7 @@
             gap: 0.55rem;
         }
 
-        .highguy-shared-page-header__subtitle {
+        .clearance-shared-page-header__subtitle {
             max-width: 760px;
             margin: 0.45rem 0 0;
             color: var(--color-slate-500);
@@ -121,16 +133,16 @@
                 justify-content: flex-start;
                 flex-wrap: wrap;
             }
-            .highguy-shared-page-header__subtitle {
+            .clearance-shared-page-header__subtitle {
                 font-size: 0.8rem;
             }
         }
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('js/highguySidebar.js') }}"></script>
-    <script src="{{ asset('js/highguyButtonSpinner.js') }}"></script>
-    <script src="{{ asset('js/highguyAlerts.js') }}"></script>
+    <script src="{{ asset('js/clearanceSidebar.js') }}"></script>
+    <script src="{{ asset('js/clearanceButtonSpinner.js') }}"></script>
+    <script src="{{ asset('js/clearanceAlerts.js') }}"></script>
     @yield('scripts')
 
     @if (session('success') && ! View::hasSection('disable_success_swal'))

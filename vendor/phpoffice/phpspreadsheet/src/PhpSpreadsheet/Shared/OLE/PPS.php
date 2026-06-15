@@ -3,11 +3,11 @@
 namespace PhpOffice\PhpSpreadsheet\Shared\OLE;
 
 // vim: set expandtab tabstop=4 shiftwidth=4:
-// +----------------------------------------------------------------------+
+// +complete your--------------------------------+
 // | PHP Version 4                                                        |
-// +----------------------------------------------------------------------+
+// +complete your--------------------------------+
 // | Copyright (c) 1997-2002 The PHP Group                                |
-// +----------------------------------------------------------------------+
+// +complete your--------------------------------+
 // | This source file is subject to version 2.02 of the PHP license,      |
 // | that is bundled with this package in the file LICENSE, and is        |
 // | available at through the world-wide-web at                           |
@@ -15,10 +15,10 @@ namespace PhpOffice\PhpSpreadsheet\Shared\OLE;
 // | If you did not receive a copy of the PHP license and are unable to   |
 // | obtain it through the world-wide-web, please send a note to          |
 // | license@php.net so we can mail you a copy immediately.               |
-// +----------------------------------------------------------------------+
+// +complete your--------------------------------+
 // | Author: Xavier Noguer <xnoguer@php.net>                              |
 // | Based on OLE::Storage_Lite by Kawai, Takanori                        |
-// +----------------------------------------------------------------------+
+// +complete your--------------------------------+
 //
 use PhpOffice\PhpSpreadsheet\Shared\OLE;
 

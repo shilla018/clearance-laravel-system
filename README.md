@@ -1,7 +1,7 @@
 <img width="2560" height="1600" alt="Screenshot 2026-04-26 215751" src="https://github.com/user-attachments/assets/0f6be489-1a67-40d3-baa1-fa96077048c1" />
-# HighGuy_37 Starter Kit
+# Clearance Starter Kit
 
-HighGuy_37 Starter Kit is a Laravel starter project built for students and developers who want a clean foundation for small to medium web applications. It includes custom authentication, public pages, a protected dashboard, profile pages, notification routes, and reusable Blade layouts styled with Bootstrap and custom CSS.
+Clearance Starter Kit is a Laravel starter project built for students and developers who want a clean foundation for small to medium web applications. It includes custom authentication, public pages, a protected dashboard, profile pages, notification routes, and reusable Blade layouts styled with Bootstrap and custom CSS.
 
 The goal is simple: give you a working Laravel base that is easy to read, extend, and redesign.
 
@@ -64,7 +64,7 @@ cp .env.example .env
 Then update the database values in `.env`:
 
 ```env
-APP_NAME="HighGuy_37 Starter Kit"
+APP_NAME="Clearance Starter Kit"
 APP_ENV=local
 APP_KEY=
 APP_DEBUG=true

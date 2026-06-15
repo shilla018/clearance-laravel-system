@@ -15,10 +15,10 @@ class UserSeeder extends Seeder
     {
         // Add Admin User
         User::updateOrCreate(
-            ['email' => 'admin@highguy.test'],
+            ['email' => 'admin@clearance.test'],
             [
-                'name' => 'HighGuy Admin',
-                'full_name' => 'HighGuy Administrator',
+                'name' => 'Clearance Admin',
+                'full_name' => 'Clearance Administrator',
                 'password' => Hash::make('password'),
                 'email_verified_at' => now(),
             ]
@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
 
         // Add Developer User
         User::updateOrCreate(
-            ['email' => 'dev@highguy.test'],
+            ['email' => 'dev@clearance.test'],
             [
                 'name' => 'Hagai Dev',
                 'full_name' => 'Lead Developer',

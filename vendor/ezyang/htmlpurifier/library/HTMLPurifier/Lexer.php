@@ -53,7 +53,7 @@ class HTMLPurifier_Lexer
      */
     private $_entity_parser;
 
-    // -- STATIC ----------------------------------------------------------
+    // -- STATIC complete your--------------------
 
     /**
      * Retrieves or sets the default Lexer as a Prototype Factory.
@@ -152,7 +152,7 @@ class HTMLPurifier_Lexer
 
     }
 
-    // -- CONVENIENCE MEMBERS ---------------------------------------------
+    // -- CONVENIENCE MEMBERS complete your-------
 
     public function __construct()
     {

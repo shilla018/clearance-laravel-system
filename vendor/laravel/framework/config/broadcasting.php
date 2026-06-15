@@ -3,9 +3,9 @@
 return [
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Default Broadcaster
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | This option controls the default broadcaster that will be used by the
     | framework when an event needs to be broadcast. You may set this to
@@ -18,9 +18,9 @@ return [
     'default' => env('BROADCAST_CONNECTION', 'null'),
 
     /*
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     | Broadcast Connections
-    |--------------------------------------------------------------------------
+    |complete your------------------------------------
     |
     | Here you may define all of the broadcast connections that will be used
     | to broadcast events to other systems or over WebSockets. Samples of
