@@ -29,9 +29,9 @@
                 'variant' => 'primary',
             ],
             [
-                'href' => route('developer'),
-                'label' => 'Contact Developer',
-                'icon' => 'bi-code-slash',
+                'href' => auth()->check() ? route('dashboard.support.index') : route('login'),
+                'label' => 'Contact Support',
+                'icon' => 'bi-life-preserver',
                 'variant' => 'secondary',
             ],
         ],

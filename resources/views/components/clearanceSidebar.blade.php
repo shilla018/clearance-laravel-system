@@ -1,18 +1,21 @@
 @php
     $isPaymentsMenuOpen = request()->is('dashboard/payments*');
     $isClearanceMenuOpen = request()->is('dashboard/clearance*');
+    $isAccommodationMenuOpen = request()->is('dashboard/accommodation*');
+    $isLibraryMenuOpen = request()->is('dashboard/library*');
+    $user = auth()->user();
 @endphp
 
 <aside id="sidebar" class="Clearance-sidebar">
     <div class="p-3 clearance-sidebar-inner">
         <div class="clearance-sidebar-brand mb-4">
             <div class="clearance-sidebar-logo" aria-hidden="true">
-                <img src="{{ asset('img/logo.png') }}" alt="Logo"
+                <img src="{{ route('system.logo') }}" alt="Logo"
                     style="width: 32px; height: 32px; border-radius: 6px;">
             </div>
             <div class="clearance-sidebar-brand-text">
-                <div class="clearance-sidebar-brand-title">NIT SIMS</div>
-                <div class="clearance-sidebar-brand-subtitle">Student Portal</div>
+                <div class="clearance-sidebar-brand-title">Clearance</div>
+                <div class="clearance-sidebar-brand-subtitle">{{ ucfirst($user->role ?? 'student') }} Portal</div>
             </div>
         </div>
         <ul class="nav flex-column">
@@ -30,24 +33,65 @@
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a href="{{ route('dashboard.payments.index') }}"
-                    class="nav-link {{ $isPaymentsMenuOpen ? 'active' : '' }}">
-                    <i class="bi bi-credit-card-2-front-fill"></i> Payments
-                </a>
-            </li>
+            @if ($user?->isStudent())
+                <li class="nav-item">
+                    <a href="{{ route('dashboard.payments.index') }}"
+                        class="nav-link {{ $isPaymentsMenuOpen ? 'active' : '' }}">
+                        <i class="bi bi-credit-card-2-front-fill"></i> Payments
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('dashboard.results.index') }}"
+                        class="nav-link {{ request()->is('dashboard/results*') ? 'active' : '' }}">
+                        <i class="bi bi-folder2-open"></i> Results
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('dashboard.clearance.index') }}"
+                        class="nav-link {{ $isClearanceMenuOpen ? 'active' : '' }}">
+                        <i class="bi bi-clipboard-check-fill"></i> Clearance
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('dashboard.accommodation.index') }}"
+                        class="nav-link {{ $isAccommodationMenuOpen ? 'active' : '' }}">
+                        <i class="bi bi-house-check-fill"></i> Accommodation
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('dashboard.library.index') }}"
+                        class="nav-link {{ $isLibraryMenuOpen ? 'active' : '' }}">
+                        <i class="bi bi-book-fill"></i> Library
+                    </a>
+                </li>
+            @endif
+
+            @if ($user?->isAdmin() || $user?->isOfficer())
+                <li class="nav-item">
+                    <a href="{{ route('dashboard.applications.index') }}"
+                        class="nav-link {{ request()->is('dashboard/applications*') ? 'active' : '' }}">
+                        <i class="bi bi-list-check"></i> Applications
+                    </a>
+                </li>
+            @endif
+
+            @if ($user?->isAdmin())
+                <li class="nav-item">
+                    <a href="{{ route('dashboard.statistics.index') }}"
+                        class="nav-link {{ request()->is('dashboard/statistics*') ? 'active' : '' }}">
+                        <i class="bi bi-graph-up-arrow"></i> Statistics
+                    </a>
+                </li>
+            @endif
 
             <li class="nav-item">
-                <a href="{{ route('dashboard.results.index') }}"
-                    class="nav-link {{ request()->is('dashboard/results*') ? 'active' : '' }}">
-                    <i class="bi bi-folder2-open"></i> Results
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a href="{{ route('dashboard.clearance.index') }}"
-                    class="nav-link {{ $isClearanceMenuOpen ? 'active' : '' }}">
-                    <i class="bi bi-clipboard-check-fill"></i> Clearance
+                <a href="{{ route('dashboard.support.index') }}"
+                    class="nav-link {{ request()->is('dashboard/support*') ? 'active' : '' }}">
+                    <i class="bi bi-life-preserver"></i> Support
                 </a>
             </li>
 
@@ -60,7 +104,7 @@
         </ul>
 
         <div class="clearance-sidebar-footer">
-            <div class="clearance-sidebar-footer__copy">&copy; 2026 NIT SIMS</div>
+            <div class="clearance-sidebar-footer__copy">&copy; 2026 Clearance</div>
         </div>
     </div>
 </aside>

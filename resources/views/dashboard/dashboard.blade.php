@@ -40,7 +40,7 @@
     </div>
 
     <div class="row g-3 g-xl-4">
-        <div class="col-xl-8">
+        <div class="col-12">
             <section class="sims-panel mb-3">
                 <div class="sims-panel__header">
                     <h3>Dashboard</h3>
@@ -107,36 +107,6 @@
             </section>
         </div>
 
-        <div class="col-xl-4">
-            <section class="sims-panel h-100">
-                <div class="sims-panel__header">
-                    <h3>News</h3>
-                </div>
-                <div class="sims-panel__body">
-                    @foreach ([
-                        ['FIRST SEMESTER EXAMINATION TIMETABLE 2024/2025', 'The first semester examination will commence on Thursday 6th February, 2025 to Friday 21st February, 2025.', '05 FEB 2025'],
-                        ['TEST ONE FOR ACADEMIC YEAR 2024/2025', 'Test one will commence on Tuesday 10th December, 2024 to Wednesday 18th December, 2024.', '05 DEC 2024'],
-                    ] as $news)
-                        <article class="sims-news-item">
-                            <span class="sims-badge">Important</span>
-                            <h4>{{ $news[0] }}</h4>
-                            <p>Dear Sir Madam</p>
-                            <p>{{ $news[1] }}</p>
-                            <strong>Attachment :</strong>
-                            <div class="sims-attachment"><i class="bi bi-file-earmark-spreadsheet"></i> XLSX</div>
-                            <div class="sims-posted">
-                                <div class="sims-avatar">{{ strtoupper(substr($student['name'], 0, 1)) }}</div>
-                                <div>
-                                    <strong>Posted By :</strong>
-                                    <span>Mr. LAMBERT RWEGOSHORA</span>
-                                    <small>Head Examination Assistant<br>{{ $news[2] }}</small>
-                                </div>
-                            </div>
-                        </article>
-                    @endforeach
-                </div>
-            </section>
-        </div>
     </div>
 </div>
 @endsection

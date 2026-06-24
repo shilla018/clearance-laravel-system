@@ -1,12 +1,22 @@
 @extends('layouts.clearanceDashboardLayout')
 
 @section('content')
-    <div class="container-fluid px-3 px-lg-4 py-4">
-        <div class="card border-0 shadow-sm rounded-4">
-            <div class="card-body p-4">
-                <h2 class="h5 mb-2">{{ $notification->title ?? 'Notification' }}</h2>
-                <p class="text-muted mb-0">{{ $notification->message ?? 'No message available.' }}</p>
+    <div class="container-fluid px-3 px-lg-4 py-4 dashboard-page sims-page">
+        <section class="sims-panel">
+            <div class="sims-panel__header">
+                <h3>{{ $notification->title ?? 'Notification' }}</h3>
+                <span>{{ ucfirst($notification->status ?? 'read') }}</span>
             </div>
-        </div>
+            <div class="sims-panel__body">
+                <p>{{ $notification->message ?? 'No message available.' }}</p>
+                @if ($notification->action_url)
+                    <a href="{{ $notification->action_url }}" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right"></i> Open Related Page</a>
+                @endif
+            </div>
+        </section>
     </div>
 @endsection
+
+@push('styles')
+<link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+@endpush

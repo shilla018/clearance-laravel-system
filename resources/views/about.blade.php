@@ -1,6 +1,6 @@
 ﻿@extends('layouts.app')
 
-@section('title', 'About Clearance Starter Kit')
+@section('title', 'About NATIONAL INSTITUTE OF TRANSPORT')
 
 @push('critical-head')
     <link rel="stylesheet" href="{{ asset('css/about.css') }}">
@@ -15,7 +15,7 @@
                         <span class="about-kicker"><i class="bi bi-stars"></i> About Clearance</span>
                         <h1 class="about-title">A practical Laravel starter kit for modern student and team projects.</h1>
                         <p class="about-copy">
-                            Clearance Starter Kit is designed to help developers launch faster with a clean foundation, ready authentication, and a
+                            NATIONAL INSTITUTE OF TRANSPORT is designed to help developers launch faster with a clean foundation, ready authentication, and a
                             dashboard structure that follows real-world project patterns.
                         </p>
                         <ul class="about-list">

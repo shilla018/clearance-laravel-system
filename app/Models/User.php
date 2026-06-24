@@ -10,6 +10,13 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    public const DEPARTMENTS = [
+        'finance' => 'Finance Office',
+        'library' => 'Library',
+        'academic' => 'Academic Department',
+        'accommodation' => 'Accommodation',
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
@@ -19,6 +26,18 @@ class User extends Authenticatable
         'name',
         'full_name',
         'email',
+        'registration_number',
+        'role',
+        'phone',
+        'sex',
+        'programme',
+        'department',
+        'level',
+        'campus',
+        'academic_year',
+        'department_key',
+        'password_expires_at',
+        'email_verified_at',
         'password',
         'last_login_at',
     ];
@@ -44,17 +63,42 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
             'last_login_at' => 'datetime',
+            'password_expires_at' => 'datetime',
         ];
     }
 
-    /**
-     * Placeholder relationship for notifications.
-     */
+    public function clearanceApplications()
+    {
+        return $this->hasMany(ClearanceApplication::class);
+    }
+
+    public function latestClearanceApplication()
+    {
+        return $this->hasOne(ClearanceApplication::class)->latestOfMany();
+    }
+
+    public function supportTickets()
+    {
+        return $this->hasMany(SupportTicket::class);
+    }
+
     public function systemNotifications()
     {
-        // Audit trails use polymorphic actor (actor_id and actor_type)
-        return $this->hasMany(AuditTrail::class, 'actor_id')
-            ->where('actor_type', User::class)
-            ->whereRaw('1 = 0');
+        return $this->hasMany(SystemNotification::class);
+    }
+
+    public function isStudent(): bool
+    {
+        return $this->role === 'student';
+    }
+
+    public function isAdmin(): bool
+    {
+        return in_array($this->role, ['admin', 'clearance_admin', 'hgadmin'], true);
+    }
+
+    public function isOfficer(): bool
+    {
+        return $this->role === 'officer';
     }
 }

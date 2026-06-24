@@ -377,8 +377,8 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="hero-logo-card p-5 bg-white rounded-4 shadow-sm border">
-                        <img src="{{ asset('img/Laravel Framework Logo White Mode Pin.jpg') }}"
-                            alt="Laravel Framework Logo"
+                        <img src="{{ route('system.logo') }}"
+                            alt="Clearance Logo"
                             loading="eager">
                     </div>
                 </div>
@@ -394,7 +394,7 @@
                         <i class="bi bi-layers"></i>
                         Tech Stack Usage
                     </span>
-                    <h2 class="home-section-title fw-bold mb-3">Stacks Used in This Starter Kit</h2>
+                    <h2 class="home-section-title fw-bold mb-3">complete your clearance here</h2>
                     <p class="text-muted mb-lg-0">
                         These are the core technologies behind this starter kit and how each one supports the application
                         during development.

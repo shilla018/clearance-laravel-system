@@ -8,22 +8,22 @@
             <div class="auth-login-shell">
                 <aside class="auth-login-brand-panel">
                     <a href="{{ route('home') }}" class="auth-login-brand">
-                        <img src="{{ asset('img/logo.png') }}" alt="Logo" class="auth-login-brand-icon" style="width: 38px; height: 38px; border-radius: 8px; margin-right: 12px;">
+                        <img src="{{ route('system.logo') }}" alt="Logo" class="auth-login-brand-icon" style="width: 38px; height: 38px; border-radius: 8px; margin-right: 12px;">
                         <span>
-                            <strong>Clearance Starter Kit</strong>
-                            <small>Student Friendly Portal</small>
+                            <strong>NATIONAL INSTITUTE OF TRANSPORT</strong>
+                            <small>academic year 2025/2026</small>
                         </span>
                     </a>
 
                     <div class="auth-login-copy">
-                        <h1>Secure access to your project dashboard</h1>
+                        <h1>secure access to your clearance</h1>
                     </div>
 
                     <div class="auth-login-guide">
                         <ul>
-                            <li>Managed authentication for your web app</li>
-                            <li>Modern dashboard with ready-to-use components</li>
-                            <li>Built for speed and educational clarity</li>
+                            <li>The Student Information Management System (SIMS) holds all the information relating to students.</li>
+                            <li>Students can view course, forums and results </li>
+                            <li>staffs can assist in clearance view students</li>
                         </ul>
                     </div>
 
@@ -41,7 +41,7 @@
                             </h2>
                         </div>
 
-                        <p class="auth-login-subtitle">Use your project account to access the administrative tools.</p>
+                        <p class="auth-login-subtitle">Use your registration number, email, phone number, or name.</p>
 
                         @include('auth.partials.feedback')
 
@@ -49,11 +49,11 @@
                             @csrf
 
                             <div class="auth-input-group">
-                                <label for="email">Email address</label>
-                                <div class="auth-input-wrap auth-login-input @error('email') is-invalid @enderror">
-                                    <input id="email" type="email" name="email" value="{{ old('email') }}" placeholder="user@example.test" required autocomplete="email">
+                                <label for="login">Registration number or email</label>
+                                <div class="auth-input-wrap auth-login-input @error('login') is-invalid @enderror">
+                                    <input id="login" type="text" name="login" value="{{ old('login') }}" placeholder="NIT/BIT/2023/2119 or admin@clearance.test" required autocomplete="username">
                                 </div>
-                                @error('email')
+                                @error('login')
                                     <div class="auth-field-error">{{ $message }}</div>
                                 @enderror
                             </div>
@@ -93,7 +93,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </section>
 @endsection
 

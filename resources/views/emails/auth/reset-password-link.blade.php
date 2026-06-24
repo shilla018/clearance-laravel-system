@@ -19,7 +19,7 @@
                 </div>
                 <h1 style="margin:16px 0 10px; font-size:28px; line-height:1.2; color:#102f45;">Reset Your Password</h1>
                 <p style="margin:0 auto; max-width:430px; font-size:15px; line-height:1.75; color:#516d80;">
-                    A request was received to reset the password for your Clearance Starter Kit account.
+                    A request was received to reset the password for your NATIONAL INSTITUTE OF TRANSPORT account.
                 </p>
             </div>
 
@@ -60,7 +60,7 @@
 
             <div
                 style="padding:18px 22px 22px; border-top:1px solid rgba(16,152,212,0.12); background:#fcfeff; text-align:center;">
-                <p style="margin:0 0 6px; font-size:13px; font-weight:400; color:#102f45;">Clearance Starter Kit</p>
+                <p style="margin:0 0 6px; font-size:13px; font-weight:400; color:#102f45;">NATIONAL INSTITUTE OF TRANSPORT</p>
                 <p style="margin:0; font-size:12px; line-height:1.7; color:#6b8597;">
                     Clearance Monitoring Dashboard
                 </p>

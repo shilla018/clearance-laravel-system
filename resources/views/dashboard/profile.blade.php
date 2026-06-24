@@ -50,6 +50,57 @@
                             <span class="profile-info-value">{{ $user->email }}</span>
                         </article>
                     </div>
+                    @if ($user->isStudent())
+                        <div class="col-md-6">
+                            <article class="profile-info-card">
+                                <span class="profile-info-label">Registration Number</span>
+                                <span class="profile-info-value">{{ $user->registration_number }}</span>
+                            </article>
+                        </div>
+                        <div class="col-md-6">
+                            <article class="profile-info-card">
+                                <span class="profile-info-label">Phone</span>
+                                <span class="profile-info-value">{{ $user->phone ?? 'Not provided' }}</span>
+                            </article>
+                        </div>
+                        <div class="col-md-6">
+                            <article class="profile-info-card">
+                                <span class="profile-info-label">Programme</span>
+                                <span class="profile-info-value">{{ $user->programme ?? 'Not provided' }}</span>
+                            </article>
+                        </div>
+                        <div class="col-md-6">
+                            <article class="profile-info-card">
+                                <span class="profile-info-label">Department</span>
+                                <span class="profile-info-value">{{ $user->department ?? 'Not provided' }}</span>
+                            </article>
+                        </div>
+                        <div class="col-md-6">
+                            <article class="profile-info-card">
+                                <span class="profile-info-label">Level</span>
+                                <span class="profile-info-value">{{ $user->level ?? 'Not provided' }}</span>
+                            </article>
+                        </div>
+                        <div class="col-md-6">
+                            <article class="profile-info-card">
+                                <span class="profile-info-label">Academic Year</span>
+                                <span class="profile-info-value">{{ $user->academic_year ?? 'Not provided' }}</span>
+                            </article>
+                        </div>
+                    @else
+                        <div class="col-md-6">
+                            <article class="profile-info-card">
+                                <span class="profile-info-label">Role</span>
+                                <span class="profile-info-value">{{ ucfirst($user->role) }}</span>
+                            </article>
+                        </div>
+                        <div class="col-md-6">
+                            <article class="profile-info-card">
+                                <span class="profile-info-label">Department</span>
+                                <span class="profile-info-value">{{ $user->department ?? 'Institution Administration' }}</span>
+                            </article>
+                        </div>
+                    @endif
                     <div class="col-md-6">
                         <article class="profile-info-card">
                             <span class="profile-info-label">Last Login</span>

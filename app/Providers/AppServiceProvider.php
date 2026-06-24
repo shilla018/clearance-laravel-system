@@ -3,7 +3,11 @@
 namespace App\Providers;
 
 use App\Models\User;
+use App\Models\ClearanceApplication;
+use App\Models\ClearanceReview;
 use App\Observers\SensitiveActivityObserver;
+use App\Observers\ClearanceApplicationObserver;
+use App\Observers\ClearanceReviewObserver;
 use App\Services\AuditTrailService;
 use Illuminate\Auth\Events\Failed;
 use Illuminate\Auth\Events\Login;
@@ -37,6 +41,8 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
         User::observe(SensitiveActivityObserver::class);
+        ClearanceApplication::observe(ClearanceApplicationObserver::class);
+        ClearanceReview::observe(ClearanceReviewObserver::class);
 
         Event::listen(Login::class, function (Login $event): void {
             app(AuditTrailService::class)->logAuthEvent('login', $event->user, [

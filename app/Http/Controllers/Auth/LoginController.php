@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
 
@@ -21,28 +23,35 @@ class LoginController extends Controller
      */
     public function login(Request $request): RedirectResponse
     {
-        $credentials = $request->validate([
-            'email' => ['required', 'email'],
+        $validated = $request->validate([
+            'login' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string'],
         ]);
 
         $remember = $request->boolean('remember');
+        $login = trim($validated['login']);
+        $user = User::where('email', $login)
+            ->orWhere('registration_number', $login)
+            ->orWhere('phone', $login)
+            ->orWhere('name', $login)
+            ->orWhere('full_name', $login)
+            ->first();
 
-        if (! Auth::attempt($credentials, $remember)) {
+        if (! $user || ! Hash::check($validated['password'], $user->password)) {
             throw ValidationException::withMessages([
-                'email' => 'These credentials do not match our records.',
+                'login' => 'These credentials do not match our records.',
             ]);
         }
 
+        Auth::login($user, $remember);
         $request->session()->regenerate();
 
-        $user = $request->user();
-        $user?->forceFill([
+        $user->forceFill([
             'last_login_at' => now(),
         ])->save();
 
         return redirect()->intended(route('dashboard.index'))
-            ->with('success', 'Welcome back, '.$request->user()->full_name.'.');
+            ->with('success', 'Welcome back, '.($user->full_name ?? $user->name).'.');
     }
 
     public function logout(Request $request): RedirectResponse

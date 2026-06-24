@@ -38,6 +38,7 @@ class ProfileController extends Controller
 
         if (!empty($validated['password'])) {
             $user->password = Hash::make($validated['password']);
+            $user->password_expires_at = null;
         }
 
         $user->save();

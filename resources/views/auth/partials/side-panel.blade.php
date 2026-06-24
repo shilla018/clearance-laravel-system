@@ -6,10 +6,10 @@
 
 <aside class="auth-brand-panel">
     <a href="{{ route('home') }}" class="auth-brand-mark">
-        <img src="{{ asset('img/logo.png') }}" alt="Clearance Logo" style="width: 48px; height: 48px; border-radius: 8px;">
+        <img src="{{ route('system.logo') }}" alt="Clearance Logo" style="width: 48px; height: 48px; border-radius: 8px;">
         <span class="auth-brand-copy">
             <strong>Clearance-KIT</strong>
-            <span>Clearance Starter Kit</span>
+            <span>NATIONAL INSTITUTE OF TRANSPORT</span>
         </span>
     </a>
 

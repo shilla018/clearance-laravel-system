@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #ff9800; color: white; padding: 20px; text-align: center; }
+        .content { padding: 20px; background: #fff3cd; border: 1px solid #ffc107; }
+        .footer { text-align: center; padding: 10px; font-size: 12px; color: #666; }
+        .warning { padding: 15px; background: #fff3cd; color: #856404; border-radius: 5px; margin: 10px 0; border-left: 4px solid #ff9800; }
+        .button { display: inline-block; padding: 10px 20px; background: #dc3545; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚠️ ONYO: Muda wa Uwazi Utaishia Sana!</h1>
+        </div>
+
+        <div class="content">
+            <p>Habari {{ $student->name }},</p>
+
+            <div class="warning">
+                <h3>Muda Unaobaki: <strong>{{ $daysRemaining }} SIKU</strong></h3>
+                <p>Muda wa mwisho wa ombi lako la uwazi ni <strong>{{ $dueDate }}</strong></p>
+            </div>
+
+            <h3>Kwa Nini Ujumbe Huu?</h3>
+            <p>Ombi lako la uwazi (Nambari {{ $application->id }}) litaishia sana kwa sababu:</p>
+            <ul>
+                <li>Baadhi ya idara hazijatoa uamuzi bado</li>
+                <li>Muda wa uthibitisho unakaribia kumalizika</li>
+            </ul>
+
+            <h3>Hali ya Ombi Sasa:</h3>
+            <ul>
+                <li><strong>Hali:</strong> {{ ucfirst($application->status) }}</li>
+                <li><strong>Kuanza:</strong> {{ $application->applied_at?->format('d M Y') ?? 'N/A' }}</li>
+                <li><strong>Muda wa Mwisho:</strong> {{ $dueDate }}</li>
+            </ul>
+
+            <h3>Hatua za Haraka:</h3>
+            <ol>
+                <li>Logia kwenye mfumo sasa sasa</li>
+                <li>Angalia hali ya kila idara</li>
+                <li>Kuwasiliana na idara zozote ambazo bado hazijakubali/kukataa</li>
+                <li>Kamata kwa timu ya msaada kwa msaada zaidi</li>
+            </ol>
+
+            <p><a href="{{ config('app.url') }}/dashboard/clearance" class="button">Angalia Ombi Langu SASA</a></p>
+
+            <hr>
+
+            <p><strong>Kumbuka:</strong> Kama muda umechelewa, huenda usiweze kusubmit tena ombi. Tafadhali haraka!</p>
+
+            <p style="font-size: 12px; color: #666;">
+                Hii ni barua otomatiki. Tafadhali usijibu kwa barua hii. Kwa maswali, wasiliana na <a href="mailto:{{ config('mail.from.address') }}">timu yetu</a>.
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; {{ date('Y') }} {{ config('app.name') }}. Haki zote zimehifadhiwa.</p>
+        </div>
+    </div>
+</body>
+</html>

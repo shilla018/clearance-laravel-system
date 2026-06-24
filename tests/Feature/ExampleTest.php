@@ -3,18 +3,22 @@
 namespace Tests\Feature;
 
 use App\Models\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
+    use RefreshDatabase;
+
     /**
      * A basic test example.
      */
-    public function test_the_application_returns_a_successful_response(): void
+    public function test_the_application_starts_on_login_page(): void
     {
         $response = $this->get('/');
 
-        $response->assertStatus(200);
+        $response->assertRedirect('/login');
     }
 
     public function test_login_page_is_available_to_guests(): void
@@ -34,5 +38,28 @@ class ExampleTest extends TestCase
         $response = $this->actingAs($user)->get('/login');
 
         $response->assertRedirect(route('dashboard.index'));
+    }
+
+    public function test_student_can_login_with_email_or_registration_number(): void
+    {
+        $user = User::factory()->create([
+            'full_name' => 'Student User',
+            'email' => 'student@example.com',
+            'registration_number' => 'NIT/BIT/2023/9999',
+            'role' => 'student',
+            'password' => Hash::make('password'),
+        ]);
+
+        $this->post(route('login.submit'), [
+            'login' => $user->email,
+            'password' => 'password',
+        ])->assertRedirect(route('dashboard.index'));
+
+        auth()->logout();
+
+        $this->post(route('login.submit'), [
+            'login' => $user->registration_number,
+            'password' => 'password',
+        ])->assertRedirect(route('dashboard.index'));
     }
 }

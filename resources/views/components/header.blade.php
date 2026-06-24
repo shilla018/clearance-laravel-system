@@ -2,7 +2,7 @@
     <div class="header-container">
         <div class="header-branding">
              <div class="header-logo">
-                <img src="{{ asset('img/logo.png') }}" alt="Logo" style="width: 38px; height: 38px; border-radius: 8px;">
+                <img src="{{ route('system.logo') }}" alt="Logo" style="width: 38px; height: 38px; border-radius: 8px;">
             </div>
             <span class="header-name">
                 <span class="header-title">CLEARANCE</span>

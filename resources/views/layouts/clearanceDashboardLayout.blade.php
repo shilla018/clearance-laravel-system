@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Student Information Management System</title>
+    <title>Clearance System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="{{ asset('css/rootcolor.css') }}" rel="stylesheet">
@@ -19,10 +19,11 @@
 
 <body data-disable-navigation-overlay="1">
     @php
+        $user = auth()->user();
         $pageHeader = match (true) {
             request()->is('dashboard') || request()->routeIs('dashboard.index') => [
-                'title' => 'Student Dashboard',
-                'subtitle' => 'View your registration status, payments, results, and clearance readiness.',
+                'title' => $user?->isAdmin() ? 'Admin Dashboard' : ($user?->isOfficer() ? 'Department Dashboard' : 'Student Dashboard'),
+                'subtitle' => $user?->isAdmin() ? 'Monitor clearance applications, support requests, and institutional progress.' : ($user?->isOfficer() ? 'Review student clearance requests assigned to your department.' : 'View your registration status, payments, results, and clearance readiness.'),
             ],
             request()->routeIs('dashboard.payments.*') => [
                 'title' => 'Student Payments',
@@ -32,9 +33,29 @@
                 'title' => 'Published Results',
                 'subtitle' => 'Check your semester results, GPA, points, and remarks.',
             ],
+            request()->routeIs('dashboard.accommodation.*') => [
+                'title' => 'Accommodation',
+                'subtitle' => 'Review hostel debts, room assignment, and return items.',
+            ],
+            request()->routeIs('dashboard.library.*') => [
+                'title' => 'Library',
+                'subtitle' => 'Review borrowed books and pending library returns.',
+            ],
             request()->routeIs('dashboard.clearance.*') => [
                 'title' => 'Clearance Application',
                 'subtitle' => 'Submit and track your institutional clearance request.',
+            ],
+            request()->routeIs('dashboard.applications.*') => [
+                'title' => 'Clearance Applications',
+                'subtitle' => 'Search, view, and process student clearance applications.',
+            ],
+            request()->routeIs('dashboard.statistics.*') => [
+                'title' => 'Statistical Dashboard',
+                'subtitle' => 'Track clearance completion, on-time processing, and support indicators.',
+            ],
+            request()->routeIs('dashboard.support.*') => [
+                'title' => 'Notification and Support',
+                'subtitle' => 'Submit, review, resolve, and respond to student support issues.',
             ],
             request()->is('dashboard/notifications*') => [
                 'title' => 'Direct Notifications',

@@ -8,9 +8,9 @@
             <div class="auth-login-shell">
                 <aside class="auth-login-brand-panel">
                     <a href="{{ route('home') }}" class="auth-login-brand">
-                        <img src="{{ asset('img/logo.png') }}" alt="Logo" class="auth-login-brand-icon">
+                        <img src="{{ route('system.logo') }}" alt="Logo" class="auth-login-brand-icon">
                         <span>
-                            <strong>Clearance Starter Kit</strong>
+                            <strong>NATIONAL INSTITUTE OF TRANSPORT</strong>
                             <small>Secure project portal</small>
                         </span>
                     </a>

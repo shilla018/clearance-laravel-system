@@ -2,11 +2,10 @@
 
 @section('content')
 <div class="container-fluid px-3 px-lg-4 py-4 dashboard-page sims-page">
-    @if ($clearance['status'] === 'Blocked')
-        <section class="sims-status-alert sims-status-alert--danger mb-3">
-            {{ $clearance['message'] }}
-        </section>
-    @endif
+    <section class="sims-status-alert {{ in_array($clearance['status'], ['denied', 'not_applied'], true) ? 'sims-status-alert--danger' : 'sims-status-alert--info' }} mb-3">
+        <strong>Clearance Status: {{ $clearance['status_label'] }}</strong>
+        <span>{{ $clearance['message'] }}</span>
+    </section>
 
     <section class="sims-panel">
         <div class="sims-panel__header">
@@ -39,8 +38,8 @@
             <div class="sims-clearance-grid mb-4">
                 @foreach ($clearance['progress'] as $item)
                     <article class="sims-clearance-step">
-                        <div class="sims-clearance-step__icon {{ $item['status'] === 'Pending' ? 'is-pending' : 'is-ready' }}">
-                            <i class="bi {{ $item['status'] === 'Pending' ? 'bi-exclamation-triangle' : 'bi-check2' }}"></i>
+                        <div class="sims-clearance-step__icon {{ $item['status_value'] === 'approved' ? 'is-ready' : ($item['status_value'] === 'denied' ? 'is-denied' : 'is-pending') }}">
+                            <i class="bi {{ $item['status_value'] === 'approved' ? 'bi-check2' : ($item['status_value'] === 'denied' ? 'bi-x-lg' : 'bi-hourglass-split') }}"></i>
                         </div>
                         <div>
                             <strong>{{ $item['office'] }}</strong>
@@ -51,7 +50,19 @@
                 @endforeach
             </div>
 
-            <form method="POST" action="{{ route('dashboard.clearance.submit') }}" class="sims-clearance-form">
+            <div class="mb-4">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <h4 class="sims-section-title sims-section-title--danger mb-0">Clearance Progress</h4>
+                    <span>{{ $clearance['percentage'] }}% Complete</span>
+                </div>
+                <div class="progress mb-3" role="progressbar" aria-valuenow="{{ $clearance['percentage'] }}" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: {{ $clearance['percentage'] }}%">{{ $clearance['percentage'] }}%</div>
+                </div>
+                <strong>Final Clearance:</strong> {{ $clearance['final_status'] }}
+            </div>
+
+            @if (! $clearance['application'] || $clearance['status'] === 'denied')
+            <form method="POST" action="{{ $clearance['application']?->canResubmit() ? route('dashboard.clearance.resubmit', $clearance['application']) : route('dashboard.clearance.submit') }}" class="sims-clearance-form">
                 @csrf
                 <div class="row g-3 align-items-center">
                     <label for="reason" class="col-lg-3 col-form-label">Reason for Clearance : <span>*</span></label>
@@ -89,11 +100,16 @@
 
                 <div class="sims-form-actions">
                     <button class="btn btn-primary btn-sm" type="submit">
-                        <i class="bi bi-upload"></i> Submit Request
+                        <i class="bi bi-upload"></i> Apply Clearance
                     </button>
                     <span>Pending payment: <strong>{{ $clearance['pending_payment'] }}</strong></span>
                 </div>
             </form>
+            @else
+                <div class="sims-form-actions">
+                    <span>Application submitted on <strong>{{ optional($clearance['application']->applied_at)->format('d M Y, H:i') }}</strong>.</span>
+                </div>
+            @endif
         </div>
     </section>
 </div>

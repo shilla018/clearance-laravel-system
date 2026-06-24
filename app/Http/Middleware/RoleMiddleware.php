@@ -18,11 +18,10 @@ class RoleMiddleware
             return redirect()->route('login');
         }
 
-        if (in_array((string) ($user->role ?? ''), ['admin', 'hgadmin'], true)) {
-            return $next($request);
-        }
+        $role = (string) ($user->role ?? '');
+        $legacyRole = $role === 'hgadmin' ? 'clearance_admin' : $role;
 
-        if ($roles === [] || in_array((string) ($user->role ?? ''), $roles, true)) {
+        if ($roles === [] || in_array($role, $roles, true) || in_array($legacyRole, $roles, true)) {
             return $next($request);
         }
 

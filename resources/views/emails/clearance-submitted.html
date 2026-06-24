@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #2c3e50; color: white; padding: 20px; text-align: center; }
+        .content { padding: 20px; background: #f9f9f9; }
+        .footer { text-align: center; padding: 10px; font-size: 12px; color: #666; }
+        .status { padding: 10px; background: #d4edda; color: #155724; border-radius: 5px; margin: 10px 0; }
+        .button { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ombi la Uwazi Limetuma</h1>
+        </div>
+
+        <div class="content">
+            <p>Habari {{ $student->name }},</p>
+
+            <p>Ombi lako la uwazi limetuma vizuri kwa mfumo wa usimamizi wa uwazi.</p>
+
+            <div class="status">
+                <strong>Hali ya Ombi:</strong> Inakusubiria uthibitisho kutoka idara mbalimbali
+            </div>
+
+            <h3>Maelezo ya Ombi:</h3>
+            <ul>
+                <li><strong>Nambari ya Kumbukumbu:</strong> {{ $application->id }}</li>
+                <li><strong>Umeme Mkutano:</strong> {{ $application->academic_year }}</li>
+                <li><strong>Sababu:</strong> {{ $application->reason ?? 'Sijajifika' }}</li>
+                <li><strong>Muda wa Mwisho:</strong> {{ $dueDate ?? 'Sijajifika' }}</li>
+            </ul>
+
+            <h3>Inachohitajika:</h3>
+            <p>Ombi lako linatasuliliwa na idara hizi:</p>
+            <ul>
+                <li>💰 Finance Office</li>
+                <li>📚 Library</li>
+                <li>🎓 Academic Department</li>
+                <li>🏠 Accommodation</li>
+            </ul>
+
+            <p>Utapokeleza arifa kila idara inapotoa uamuzi. Tafadhali kagua mfumo kila asubuhi kwa sababu karibu kutokua na ujumbe wa zimegazeti.</p>
+
+            <p><a href="{{ config('app.url') }}/dashboard/clearance" class="button">Angalia Ombi Langu</a></p>
+
+            <hr>
+
+            <p style="font-size: 12px; color: #666;">
+                Hii ni barua otomatiki. Tafadhali usijibu kwa barua hii. Kwa maswali, tafadhali wasiliana na <a href="mailto:{{ config('mail.from.address') }}">timu yetu</a>.
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; {{ date('Y') }} {{ config('app.name') }}. Haki zote zimehifadhiwa.</p>
+        </div>
+    </div>
+</body>
+</html>

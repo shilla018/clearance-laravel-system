@@ -8,9 +8,9 @@
             <div class="auth-login-shell">
                 <aside class="auth-login-brand-panel">
                     <a href="{{ route('home') }}" class="auth-login-brand">
-                        <i class="bi bi-cone-striped auth-login-brand-icon" aria-hidden="true"></i>
+                        <img src="{{ route('system.logo') }}" alt="Logo" class="auth-login-brand-icon">
                         <span>
-                            <strong>Clearance Starter Kit</strong>
+                            <strong>NATIONAL INSTITUTE OF TRANSPORT</strong>
                             <small>Secure project portal</small>
                         </span>
                     </a>
@@ -43,7 +43,7 @@
                             </h2>
                         </div>
 
-                        <p class="auth-login-subtitle">Update your password below to regain secure access to your project dashboard.</p>
+                        <p class="auth-login-subtitle">Update your password below to regain secure access to your clearance.</p>
 
                         @include('auth.partials.feedback')
 

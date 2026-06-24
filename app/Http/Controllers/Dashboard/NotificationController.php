@@ -21,7 +21,7 @@ class NotificationController extends Controller
     {
         $source = $this->notificationSource($request);
         $notifications = $source ? $source->latest()->limit(6)->get() : collect();
-        
+
         // Removed trait-based 'unread()' call and replaced with standard query
         $unreadCount = $source ? (clone $source)->where('status', 'unread')->count() : 0;
 
@@ -72,6 +72,9 @@ class NotificationController extends Controller
                 ->route('dashboard.notifications.index')
                 ->with('error', 'Notification not found.');
         }
+
+        // Authorize access to this notification
+        $this->authorize('view', $notification);
 
         if (($notification->status ?? null) === 'unread') {
             $notification->update(['status' => 'read']);
