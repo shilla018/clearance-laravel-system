@@ -552,20 +552,20 @@ class DashboardController extends Controller
                 'year' => '2023/2024',
                 'invoices' => [
                     ['invoice_no' => 'NT1010237250', 'control_number' => '995470269923', 'description' => 'Tuition fee', 'mode' => 'PARTIAL', 'currency' => 'TZS', 'amount' => '1,500,000.00', 'paid' => '1,500,000.00', 'balance' => '0.00'],
-                    ['invoice_no' => 'NT1040241526', 'control_number' => '995470300242', 'description' => 'Other Fee', 'mode' => 'EXACT', 'currency' => 'TZS', 'amount' => '5,000.00', 'paid' => '5,000.00', 'balance' => '0.00'],
+                    // ['invoice_no' => 'NT1040241526', 'control_number' => '995470300242', 'description' => 'Other Fee', 'mode' => 'EXACT', 'currency' => 'TZS', 'amount' => '5,000.00', 'paid' => '5,000.00', 'balance' => '0.00'],
                 ],
             ],
             [
                 'year' => '2024/2025',
                 'invoices' => [
                     ['invoice_no' => 'NT10102412694', 'control_number' => '995470348868', 'description' => 'Tuition fee', 'mode' => 'PARTIAL', 'currency' => 'TZS', 'amount' => '1,500,000.00', 'paid' => '1,500,000.00', 'balance' => '0.00'],
-                    ['invoice_no' => 'NT104025615', 'control_number' => '995470364807', 'description' => 'Other Fee', 'mode' => 'EXACT', 'currency' => 'TZS', 'amount' => '5,000.00', 'paid' => '5,000.00', 'balance' => '0.00'],
+                    // ['invoice_no' => 'NT104025615', 'control_number' => '995470364807', 'description' => 'Other Fee', 'mode' => 'EXACT', 'currency' => 'TZS', 'amount' => '5,000.00', 'paid' => '5,000.00', 'balance' => '0.00'],
                 ],
             ],
             [
                 'year' => '2025/2026',
                 'invoices' => [
-                    ['invoice_no' => 'NT10102511540', 'control_number' => '995470431649', 'description' => 'Tuition fee', 'mode' => 'PARTIAL', 'currency' => 'TZS', 'amount' => '1,500,000.00', 'paid' => '1,200,000.00', 'balance' => '300,000.00'],
+                    ['invoice_no' => 'NT10102511540', 'control_number' => '995470431649', 'description' => 'Tuition fee', 'mode' => 'PARTIAL', 'currency' => 'TZS', 'amount' => '1,500,000.00', 'paid' => '1,200,000.00', 'balance' => '300,000'],
                 ],
             ],
         ];
@@ -599,7 +599,7 @@ class DashboardController extends Controller
                 'title' => 'SECOND YEAR - 2024/2025 - SEMESTER II',
                 'gpa' => '3.7',
                 'courses' => [
-                    ['code' => 'GSU 07409', 'name' => 'Research Methodology', 'unit' => 12, 'ca' => '25.0 / 40', 'se' => '24.0 / 60', 'total' => 50, 'grade' => 'B', 'point' => 36, 'remark' => 'PASS'],
+                    ['code' => 'GSU 07409', 'name' => 'Research Methodology', 'unit' => 12, 'ca' => '15.0 / 40', 'se' => '24.0 / 60', 'total' => 50, 'grade' => 'D', 'point' => 36, 'remark' => 'CARRY'],
                     ['code' => 'ITU 07406', 'name' => 'Algorithm Analysis and Design', 'unit' => 9, 'ca' => '28.5 / 40', 'se' => '33.0 / 60', 'total' => 62, 'grade' => 'B+', 'point' => 36, 'remark' => 'PASS'],
                     ['code' => 'ITU 07407', 'name' => 'IT and Cyber Law', 'unit' => 9, 'ca' => '34.0 / 40', 'se' => '42.0 / 60', 'total' => 76, 'grade' => 'A', 'point' => 45, 'remark' => 'PASS'],
                     ['code' => 'ITU 07410', 'name' => 'Object-Oriented Programming', 'unit' => 12, 'ca' => '19.0 / 40', 'se' => '32.4 / 60', 'total' => 51, 'grade' => 'B', 'point' => 36, 'remark' => 'PASS'],
@@ -634,7 +634,7 @@ class DashboardController extends Controller
     private function resultSummary(User $user): array
     {
         return [
-            'Total GPA' => '3.37',
+            'Total GPA' => '3.8',
             'Overall Status' => 'PASS',
             'Total Units' => '84',
             'Points Earned' => '309',

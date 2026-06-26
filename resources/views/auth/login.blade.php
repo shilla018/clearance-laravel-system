@@ -1,4 +1,4 @@
-﻿@extends('layouts.auth')
+@extends('layouts.auth')
 
 @section('title', 'Login')
 
@@ -41,6 +41,9 @@
                             </h2>
                         </div>
 
+
+                LOGIN PAGE
+
                         <p class="auth-login-subtitle">Use your registration number, email, phone number, or name.</p>
 
                         @include('auth.partials.feedback')
@@ -51,7 +54,7 @@
                             <div class="auth-input-group">
                                 <label for="login">Registration number or email</label>
                                 <div class="auth-input-wrap auth-login-input @error('login') is-invalid @enderror">
-                                    <input id="login" type="text" name="login" value="{{ old('login') }}" placeholder="NIT/BIT/2023/2119 or admin@clearance.test" required autocomplete="username">
+                                    <input id="login" type="text" name="login" value="{{ old('login') }}" placeholder="Reg. number or email" required autocomplete="username">
                                 </div>
                                 @error('login')
                                     <div class="auth-field-error">{{ $message }}</div>

@@ -25,10 +25,8 @@ return [
     | Deprecations Log Channel
     |complete your------------------------------------
     |
-    | This option controls the log channel that should be used to log warnings
-    | regarding deprecated PHP and library features. This allows you to get
-    | your application ready for upcoming major versions of dependencies.
-    |
+    ii sehemu ina controls ambazo ni za kufanya log warings.kuruhusu application
+    kuwa tayari   |
     */
 
     'deprecations' => [
